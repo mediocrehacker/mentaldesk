@@ -1,7 +1,7 @@
 import '@carbon/react/index.scss';
 import './global.scss';
 import { Inter } from 'next/font/google'
-import { Nav } from './nav.tsx'
+import { Nav } from './nav'
 const inter = Inter({ subsets: ['latin'] })
 
 
