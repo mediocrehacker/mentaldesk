@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import React from "react";
 import { Notification, Login} from "@carbon/icons-react";
 import { render } from "react-dom";
@@ -8,37 +9,59 @@ import {
   HeaderName,
   HeaderGlobalAction,
   HeaderGlobalBar,
+  HeaderSideNavItems,
   HeaderNavigation,
+  HeaderContainer,
   HeaderMenu,
+  HeaderMenuButton,
   HeaderMenuItem,
+  SkipToContent,
+  SideNav,
+  SideNavItems,
   Theme
 } from "@carbon/react";
 
 export const Nav = () => (
-  <div className="container">
+  <HeaderContainer
+    render={({ isSideNavExpanded, onClickSideNavExpand }) => (
     <Theme theme="g100">
       <Header aria-label="Mental Desk">
-        <HeaderName href="#" prefix="Mental">
+        <SkipToContent />
+        <HeaderMenuButton
+          aria-label={isSideNavExpanded ? 'Close menu' : 'Open menu'}
+          onClick={onClickSideNavExpand}
+          isActive={isSideNavExpanded}
+          aria-expanded={isSideNavExpanded}
+        />
+        <HeaderName href="/" prefix="Mental">
           [Desk]
         </HeaderName>
         <HeaderNavigation aria-label="IBM [Platform]">
-          <HeaderMenuItem href="#">О Проекте</HeaderMenuItem>
-          <HeaderMenuItem href="#">Рабочие листы</HeaderMenuItem>
-          <HeaderMenu aria-label="Link 4" menuLinkName="Профессионалам">
-            <HeaderMenuItem href="#">Рабочие Листы</HeaderMenuItem>
-            <HeaderMenuItem href="#">Калькулятор</HeaderMenuItem>
+          <li><Link className="cds--header__menu-item" href="/about"><span className="cds--text-truncate--end">О Проекте</span></Link></li>
+          <li><Link className="cds--header__menu-item" href="/worksheets"><span className="cds--text-truncate--end">Рабочие листы</span></Link></li>
+          <HeaderMenu aria-label="Профессионалам" menuLinkName="Профессионалам">
+            <li><Link className="cds--header__menu-item" href="/worksheets"><span className="cds--text-truncate--end" href="/worksheets">Рабочие листы</span></Link></li>
+            <li><Link className="cds--header__menu-item" href="/calculator"><span className="cds--text-truncate--end">Калькулятор</span></Link></li>
           </HeaderMenu>
         </HeaderNavigation>
-        <HeaderGlobalBar>
-          <HeaderGlobalAction aria-label="Notifications" onClick={() => {}}>
-            <Notification />
-          </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="Login" onClick={() => {}}>
-            <Login />
-          </HeaderGlobalAction>
-        </HeaderGlobalBar>
+        <SideNav
+          aria-label="Side navigation"
+          expanded={isSideNavExpanded}
+          isPersistent={false}
+          onSideNavBlur={onClickSideNavExpand}>
+          <SideNavItems>
+            <HeaderSideNavItems>
+              <li><Link className="cds--header__menu-item" href="/about"><span className="cds--text-truncate--end">О Проекте</span></Link></li>
+              <li><Link className="cds--header__menu-item" href="/worksheets"><span className="cds--text-truncate--end">Рабочие листы</span></Link></li>
+              <HeaderMenu aria-label="Профессионалам" menuLinkName="Профессионалам">
+                <li><Link className="cds--header__menu-item" href="/worksheets"><span className="cds--text-truncate--end" href="/worksheets">Рабочие листы</span></Link></li>
+                <li><Link className="cds--header__menu-item" href="/calculator"><span className="cds--text-truncate--end">Калькулятор</span></Link></li>
+              </HeaderMenu>
+            </HeaderSideNavItems>
+          </SideNavItems>
+        </SideNav>
       </Header>
     </Theme>
-  </div>
-);
-
+    )}
+  />
+)

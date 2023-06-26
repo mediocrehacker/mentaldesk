@@ -2,6 +2,7 @@ import '@carbon/react/index.scss';
 import './global.scss';
 import { Inter } from 'next/font/google'
 import { Nav } from './nav'
+import { Footer } from './footer'
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -17,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={inter.className}>
+      <body className={inter.className} >
         <Nav /> 
         <main>{children}</main>
-        <footer>footer</footer>
+        <Footer />
       </body>
     </html>
   )
