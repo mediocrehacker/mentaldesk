@@ -10,36 +10,36 @@ async function getWorksheets() {
 export default async function WorksheetsPage() {
   const worksheets = await getWorksheets();
 
-  return(
+  return (
     <div>
       <div className="page-header-wrapper">
-          <div className="page-header">
-            <h1>Рабочие Листы</h1>
-          </div>
+        <div className="page-header">
+          <h1>Рабочие Листы</h1>
+        </div>
       </div>
-    <div className="container">
-      <div className="worksheets-contnent">
-      {worksheets?.map((worksheet) => {
-        return <Worksheet key={worksheet.id} worksheet={worksheet} />;
-      })}
+      <div className="container">
+        <div className="worksheets-contnent">
+          {worksheets?.map((worksheet) => {
+            return <Worksheet key={worksheet.id} worksheet={worksheet} />;
+          })}
+        </div>
       </div>
     </div>
-      </div>
   )
 }
 
 function Worksheet({ worksheet }: any) {
   const { id, title, teaser, created } = worksheet || {}
 
-  return(
+  return (
     <div>
       <h2>
         <Link href={`/worksheets/${id}`}>
           {title}
         </Link>
       </h2>
-        <h5>{teaser}</h5>
-        <p>{created}</p>
+      <h5>{teaser}</h5>
+      <p>{created}</p>
     </div>
   );
 }
