@@ -1,14 +1,9 @@
 import Link from 'next/link'
-import styles from './page.module.scss'
-
-async function getWorksheets() {
-  const res = await fetch('http://127.0.0.1:8090/api/collections/worksheets/records?page1&perPage=30');
-  const data = await res.json();
-  return data?.items as any[];
-}
+import fs from 'fs'
+import matter from 'gray-matter';
 
 export default async function WorksheetsPage() {
-  const worksheets = await getWorksheets();
+  const names = fs.readdirSync('./content/worksheets');
 
   return (
     <div>
@@ -18,9 +13,9 @@ export default async function WorksheetsPage() {
         </div>
       </div>
       <div className="container">
-        <div className="worksheets-contnent">
-          {worksheets?.map((worksheet) => {
-            return <Worksheet key={worksheet.id} worksheet={worksheet} />;
+        <div className="worksheets-content">
+          {names?.map((name) => {
+            return <Worksheet key={name} name={name} />;
           })}
         </div>
       </div>
@@ -28,18 +23,18 @@ export default async function WorksheetsPage() {
   )
 }
 
-function Worksheet({ worksheet }: any) {
-  const { id, title, teaser, created } = worksheet || {}
+function Worksheet({ name }: any) {
+  const file = fs.readFileSync(`./content/worksheets/${name}/content.mdx`);
+  const worksheet = matter(file);
 
   return (
     <div>
       <h2>
-        <Link href={`/worksheets/${id}`}>
-          {title}
+        <Link href={`/worksheets/${name}`}>
+          {worksheet?.data?.title}
         </Link>
       </h2>
-      <h5>{teaser}</h5>
-      <p>{created}</p>
+      <p>{worksheet?.data?.teaser}</p>
     </div>
   );
 }
