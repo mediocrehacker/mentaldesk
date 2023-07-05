@@ -23,7 +23,7 @@ export default async function WorksheetsPage() {
   )
 }
 
-function Worksheet({ name }: any) {
+function Worksheet({ name }: { name: string }) {
   const file = fs.readFileSync(`./content/worksheets/${name}/content.mdx`);
   const worksheet = matter(file);
 

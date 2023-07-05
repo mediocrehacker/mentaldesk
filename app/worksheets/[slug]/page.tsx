@@ -17,8 +17,17 @@ async function toHtml(content: any ) {
   return(String(file)) 
 }
 
-export default async function WorksheetPage({ params }: any) {
-  const file = fs.readFileSync(`./content/worksheets/${params.id}/content.mdx`);
+
+export async function generateStaticParams() {
+  const names = fs.readdirSync('./content/worksheets');
+ 
+  return names.map((name) => ({
+    slug: name,
+  }))
+}
+
+export default async function WorksheetPage({ params }: { params: { slug: string }} ) {
+  const file = fs.readFileSync(`./content/worksheets/${params.slug}/content.mdx`);
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
 
