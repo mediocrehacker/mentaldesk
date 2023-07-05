@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{paratype}
+\usepackage[
+includehead,
+landscape,
+lmargin=16px,
+rmargin=16px,
+tmargin=16px,
+bmargin=48px
+]{geometry}
+
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+
+\begin{document}
+\title{Дневник Активности}
+\author{Сухих Дмитрий Сергеевич}
+% \date{}
+\pagestyle{fancy}
+\usefont{T2A}{PTSans-TLF}{m}{n}
+% \maketitle
+
+% Header and Footer
+\fancyhf{} % clear existing header/footer entries
+\fancyhead[L]{\textbf{Дневник Активности}}
+\fancyhead[R]{\scriptsize{Заполните, что вы \textbf{делали} в течении недели}}
+\fancyfoot[L]{Mental\textbf{Desk} \\ \footnotesize{Психолог: Ваше Имя Фамилия}}
+\fancyfoot[R]{\footnotesize{Клиент: Имя и Фамилия клиента} \\ \footnotesize{Дата: 01.09.2023}}
+
+% Table 
+\begin{table}[htbp]
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{|>{\small}c|Y|Y|Y|Y|Y|Y|Y|}
+\hline
+ & \textbf{Понедельник} & \textbf{Вторник} & \textbf{Среда} & \textbf{Четверг} & \textbf{Пятница} & \textbf{Суббота} & \textbf{Воскресенье} \\
+\hline
+06:00 - 07:00 & & & & & & & \\
+\hline
+07:00 - 08:00 & & & & & & & \\
+\hline
+08:00 - 09:00 & & & & & & & \\
+\hline
+09:00 - 10:00 & & & & & & & \\
+\hline
+10:00 - 11:00 & & & & & & & \\
+\hline
+11:00 - 12:00 & & & & & & & \\
+\hline
+12:00 - 13:00 & & & & & & & \\
+\hline
+13:00 - 14:00 & & & & & & & \\
+\hline
+14:00 - 15:00 & & & & & & & \\
+\hline
+15:00 - 16:00 & & & & & & & \\
+\hline
+16:00 - 17:00 & & & & & & & \\
+\hline
+17:00 - 18:00 & & & & & & & \\
+\hline
+18:00 - 19:00 & & & & & & & \\
+\hline
+19:00 - 20:00 & & & & & & & \\
+\hline
+20:00 - 21:00 & & & & & & & \\
+\hline
+21:00 - 22:00 & & & & & & & \\
+\hline
+22:00 - 23:00 & & & & & & & \\
+\hline
+23:00 - 24:00 & & & & & & & \\
+\hline
+\end{tabularx}
+\end{center}
+\label{tab:activity_diary}
+\end{table}
+
+\end{document}
