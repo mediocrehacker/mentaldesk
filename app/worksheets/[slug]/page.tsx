@@ -40,6 +40,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
       </div>
       <div className="container">
         <div className="markdown">
+          <p>{ worksheet?.data?.teaser }</p>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </div>
