@@ -33,7 +33,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const file = fs.readFileSync(`./content/worksheets/${params.slug}/content.mdx`);
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
-  const screenshootSrc = `/worksheets/${params.slug}/screenshoot1.png`;
+  const screenshootSrc = `/worksheets/${params.slug}/screenshoot.png`;
   const pdfSrc = `/worksheets/${params.slug}/${params.slug}.pdf`;
 
   return (
