@@ -1,0 +1,12 @@
+# -*- restclient -*-
+# Dev 
+GET http://localhost:9111/api/auth/providers
+
+#
+# Create an account
+#
+POST http://localhost:9111/api/auth/providers
+Content-Type: application/json
+{ "email": "test@gmail.com"
+, "password": "test"
+}
