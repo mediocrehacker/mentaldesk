@@ -1,6 +1,6 @@
 # -*- restclient -*-
 # Dev 
-GET http://localhost:9111/api/auth/providers
+GET http://localhost:3000/api/auth/providers
 
 #
 # Create an account

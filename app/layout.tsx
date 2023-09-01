@@ -1,5 +1,6 @@
 import '@carbon/react/index.scss';
 import './global.scss';
+import Navbar from './components/Navbar'
 import { Nav } from './nav'
 import { Footer } from './Footer'
 import Script from 'next/script';

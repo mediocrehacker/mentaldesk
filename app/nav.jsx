@@ -2,19 +2,18 @@
 
 import Link from 'next/link'
 import React from "react";
-import { Notification, Login} from "@carbon/icons-react";
+import { Notification, UserAvatar } from "@carbon/icons-react";
 import { render } from "react-dom";
 import {
   Header,
   HeaderName,
-  HeaderGlobalAction,
-  HeaderGlobalBar,
   HeaderSideNavItems,
   HeaderNavigation,
   HeaderContainer,
   HeaderMenu,
   HeaderMenuButton,
-  HeaderMenuItem,
+  HeaderGlobalBar,
+  HeaderGlobalAction,
   SkipToContent,
   SideNav,
   SideNavItems,
@@ -43,7 +42,18 @@ export const Nav = () => (
             <li><Link className="cds--header__menu-item" href="/worksheets"><span className="cds--text-truncate--end" href="/worksheets">Рабочие листы</span></Link></li>
             <li><Link className="cds--header__menu-item" href="/calculator"><span className="cds--text-truncate--end">Калькулятор</span></Link></li>
           </HeaderMenu>
+          <li><Link className="cds--header__menu-item" href="/api/auth/signin"><span className="cds--text-truncate--end">Регистрация</span></Link></li>
         </HeaderNavigation>
+          <HeaderGlobalBar>
+            <HeaderGlobalAction aria-label="Вход" >
+              <Link href="/api/auth/signin">
+                <UserAvatar size={20} />
+              </Link>
+            </HeaderGlobalAction>
+            <HeaderGlobalAction aria-label="Уведомления" >
+              <Notification size={20} />
+            </HeaderGlobalAction>
+          </HeaderGlobalBar>
         <SideNav
           aria-label="Side navigation"
           expanded={isSideNavExpanded}
