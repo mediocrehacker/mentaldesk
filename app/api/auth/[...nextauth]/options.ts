@@ -1,6 +1,7 @@
 import type { NextAuthOptions } from 'next-auth'
 import GitHubProvider from 'next-auth/providers/github'
 import YandexProvider from "next-auth/providers/yandex";
+import VkProvider from "next-auth/providers/vk";
 import CredentialsProvider from 'next-auth/providers/credentials'
 
 export const options: NextAuthOptions = {
@@ -12,6 +13,10 @@ export const options: NextAuthOptions = {
     YandexProvider({
       clientId: process.env.YANDEX_CLIENT_ID as string,
       clientSecret: process.env.YANDEX_CLIENT_SECRET as string,
+    }),
+    VkProvider({
+      clientId: process.env.VK_CLIENT_ID as string,
+      clientSecret: process.env.VK_CLIENT_SECRET as string,
     }),
     CredentialsProvider({
       name: "Credentials",
