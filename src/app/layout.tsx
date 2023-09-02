@@ -1,6 +1,6 @@
 import '@carbon/react/index.scss';
 import './global.scss';
-import { Nav } from './nav'
+import Navbar from './components/Navbar'
 import { Footer } from './Footer'
 import Script from 'next/script';
 
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <div className="layout">
-          <Nav />
+          <Navbar />
           <main>{children}</main>
           <Footer />
         </div>
@@ -36,7 +36,6 @@ export default function RootLayout({
         });`
       }
       </Script>
-      <noscript><div><img src="https://mc.yandex.ru/watch/94751413" style={{ display: 'none' }} alt="" /></div></noscript>
       </body>
     </html>
   )
