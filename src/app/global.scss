@@ -12,6 +12,23 @@ body {
     height: 100%;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
 .layout {
     display: grid;
     grid-template-columns: 100%;

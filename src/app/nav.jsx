@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React from "react";
-import { Notification, UserAvatar } from "@carbon/icons-react";
+import { Logout, Notification, UserAvatar } from "@carbon/icons-react";
 import { render } from "react-dom";
 import {
   Header,
@@ -46,12 +46,17 @@ export const Nav = () => (
         </HeaderNavigation>
           <HeaderGlobalBar>
             <HeaderGlobalAction aria-label="Вход" >
-              <Link href="/api/auth/signin">
+              <Link href="/profile">
                 <UserAvatar size={20} />
               </Link>
             </HeaderGlobalAction>
             <HeaderGlobalAction aria-label="Уведомления" >
               <Notification size={20} />
+            </HeaderGlobalAction>
+            <HeaderGlobalAction aria-label="Выход" >
+              <Link href="/api/auth/signout?callbackUrl=/">
+                <Logout size={20} />
+              </Link>
             </HeaderGlobalAction>
           </HeaderGlobalBar>
         <SideNav
