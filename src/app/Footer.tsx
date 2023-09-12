@@ -1,7 +1,9 @@
 import Link from 'next/link'
 
 export const Footer = () => (
-  <footer className="cds--g100">
-    <h5>© 2023 Mental [Desk]. All rights reserved</h5>
-  </footer>
+<footer className="footer footer-center p-4 bg-base-300 text-base-content sticky top-[100vh]">
+  <aside>
+    <p>2023 © Mental Desk. All rights reserved</p>
+  </aside>
+</footer>
 )

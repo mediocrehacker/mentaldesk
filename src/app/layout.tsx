@@ -21,12 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={inter.className}>
-      <body>
-        <div >
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </div>
+      <body className="min-h-screen">
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       <Script id="yandex-metrica" strategy="afterInteractive">
       {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
