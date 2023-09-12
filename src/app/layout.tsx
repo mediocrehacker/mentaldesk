@@ -2,6 +2,12 @@ import './global.scss';
 import Navbar from './components/Navbar'
 import { Footer } from './Footer'
 import Script from 'next/script';
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['cyrillic'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Mental Desk',
@@ -14,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru">
+    <html lang="ru" className={inter.className}>
       <body>
-        <div className="layout">
+        <div >
           <Navbar />
           <main>{children}</main>
           <Footer />
