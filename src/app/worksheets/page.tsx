@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import fs from 'fs'
+import path from 'path'
 import matter from 'gray-matter';
 
+const contentDir = path.join(process.cwd(), 'src', 'app', 'content')
+
 export default async function WorksheetsPage() {
-  const names = fs.readdirSync('./content/worksheets');
+  const worksheetsDir = path.join(contentDir, 'worksheets'); 
+  const names = fs.readdirSync(worksheetsDir);
 
   return (
     <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
@@ -16,7 +20,8 @@ export default async function WorksheetsPage() {
 }
 
 function Worksheet({ name }: { name: string }) {
-  const file = fs.readFileSync(`./content/worksheets/${name}/content.mdx`);
+  const worksheetsDir = path.join(contentDir, 'worksheets'); 
+  const file = fs.readFileSync(path.join(worksheetsDir, `/${name}/content.mdx`));
   const worksheet = matter(file);
 
   return (

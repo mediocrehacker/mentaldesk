@@ -5,6 +5,7 @@ const nextConfig = {
   sassOptions: {
   },
   experimental: {
+    serverActions: true,
     mdxRs: true,
   },
   images: {
@@ -20,4 +21,5 @@ const nextConfig = {
 }
 
 const withMDX = require('@next/mdx')()
+
 module.exports = withMDX(nextConfig)

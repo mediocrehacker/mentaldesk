@@ -10,15 +10,12 @@ export default async function Home() {
     redirect('/api/auth/signin?callbackUrl=/profile')
   }
 
-
   return (
-    <main className="main">
-      <div className="description">
-        <h1>Профайл пользователя</h1>
-      </div>
-      <section className="flex flex-col gap-6">
+    <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+      <h1>Профайл</h1>
+      <section>
         <UserCard user={session?.user} pagetype={"Server"} />
       </section>
-    </main>
+    </div>
   )
 }

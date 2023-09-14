@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import fs from 'fs'
+import path from 'path'
 import matter from 'gray-matter';
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
@@ -20,9 +21,11 @@ async function toHtml(content: any) {
   return (String(file))
 }
 
+const contentDir = path.join(process.cwd(), 'src', 'app', 'content')
 
 export async function generateStaticParams() {
-  const names = fs.readdirSync('./content/worksheets');
+  const worksheetsDir = path.join(contentDir, 'worksheets'); 
+  const names = fs.readdirSync(worksheetsDir);
 
   return names.map((name) => ({
     slug: name,
@@ -30,7 +33,8 @@ export async function generateStaticParams() {
 }
 
 export default async function WorksheetPage({ params }: { params: { slug: string } }) {
-  const file = fs.readFileSync(`./content/worksheets/${params.slug}/content.mdx`);
+  const worksheetsDir = path.join(contentDir, 'worksheets'); 
+  const file = fs.readFileSync(path.join(worksheetsDir, `${params.slug}/content.mdx`));
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
   const screenshootSrc = `/worksheets/${params.slug}/screenshoot.png`;
@@ -41,9 +45,9 @@ export default async function WorksheetPage({ params }: { params: { slug: string
           <h1>{worksheet?.data?.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content }} />
           <div className="">
-          <Image src={screenshootSrc}
-              width={400}
-              height={400}
+          <Image className="max-w-xs md:max-w-lg" src={screenshootSrc}
+              width={512}
+              height={512}
               alt="Изображение рабочего листа"
               unoptimized />
           <a href={pdfSrc} className="cds--link">Скачать PDF</a>

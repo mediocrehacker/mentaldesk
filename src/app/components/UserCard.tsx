@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from 'next/link'
 
 type User = {
     name?: string | null | undefined;
@@ -13,37 +14,30 @@ type Props = {
 
 export default function Card({ user, pagetype }: Props) {
 
-    //console.log(user)
-
-    const greeting = user?.name ? (
-        <div className="flex flex-col items-center p-6 bg-white rounded-lg font-bold text-5xl text-black">
-            Hello {user?.name}!
-        </div>
-    ) : null
-
-    // const emailDisplay = user?.email ? (
-    //     <div className="flex flex-col items-center p-6 bg-white rounded-lg font-bold text-5xl text-black">
-    //         {user?.email}
-    //     </div>
-    // ) : null
-
-    const userImage = user?.image ? (
-        <Image
-            className="border-4 border-black dark:border-slate-500 drop-shadow-xl shadow-black rounded-full mx-auto mt-8"
-            src={user?.image}
-            width={200}
-            height={200}
-            alt={user?.name ?? "Profile Pic"}
-            priority={true}
-        />
-    ) : null
-
     return (
-        <section className="flex flex-col gap-4">
-            {greeting}
-            {/* {emailDisplay} */}
-            {userImage}
-            <p className="text-2xl text-center">{pagetype} Page!</p>
-        </section>
+      <div className="card m:w-[600px] bg-primary text-primary-content shadow-xl not-prose">
+        <div className="flex h-[126px] flex-col justify-center p-8"><h1 className="text-xl m:text-2xl">{user?.name}</h1></div>
+        <div className="card-body bg-base-100">
+        <h2 className="card-title text-base">{ user?.email }</h2>
+          <Avatar imageSrc={user?.image || ""} />
+          <div className="card-actions justify-end pt-4">
+            <Link href="/user" className="btn btn-outline">Редактировать</Link>
+          </div>
+        </div>
+      </div>
     )
+}
+
+type PropsAvatar = {
+    imageSrc: string,
+}
+
+function Avatar({imageSrc}: PropsAvatar) {
+  return(
+    <div className="avatar">
+      <div className="w-16 mt-4 mask mask-hexagon">
+      <Image className="" width="96" height="96" src={imageSrc} alt="Аватар" />
+      </div>
+   </div>
+  ) 
 }

@@ -10,6 +10,11 @@ const prisma = new PrismaClient();
 
 export const options: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
+
+  pages: {
+    newUser: '/user' // New users will be directed here on first sign in (leave the property out if not of interest)
+  },
+
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID as string,
@@ -22,33 +27,33 @@ export const options: NextAuthOptions = {
     VkProvider({
       clientId: process.env.VK_CLIENT_ID as string,
       clientSecret: process.env.VK_CLIENT_SECRET as string,
-    }),
-    CredentialsProvider({
-      name: "Credentials",
-      credentials: {
-        username: {
-          label: "Username:",
-          type: "text",
-          placeholder: "your-cool-username"
-        },
-        password: {
-          label: "Password:",
-          type: "password",
-          placeholder: "your-awesome-password"
-        }
-      },
-      async authorize(credentials) {
-        // This is where you need to retrieve user data 
-        // to verify with credentials
-        // Docs: https://next-auth.js.org/configuration/providers/credentials
-        const user = { id: "42", name: "Dave", password: "nextauth" }
-
-        if (credentials?.username === user.name && credentials?.password === user.password) {
-          return user
-        } else {
-          return null
-        }
-      }
     })
+    // CredentialsProvider({
+    //   name: "Credentials",
+    //   credentials: {
+    //     username: {
+    //       label: "Username:",
+    //       type: "text",
+    //       placeholder: "your-cool-username"
+    //     },
+    //     password: {
+    //       label: "Password:",
+    //       type: "password",
+    //       placeholder: "your-awesome-password"
+    //     }
+    //   },
+    //   async authorize(credentials) {
+    //     // This is where you need to retrieve user data 
+    //     // to verify with credentials
+    //     // Docs: https://next-auth.js.org/configuration/providers/credentials
+    //     const user = { id: "42", name: "Dave", password: "nextauth" }
+
+    //     if (credentials?.username === user.name && credentials?.password === user.password) {
+    //       return user
+    //     } else {
+    //       return null
+    //     }
+    //   }
+    // })
   ],
 }
