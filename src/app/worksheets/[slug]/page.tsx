@@ -37,45 +37,17 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const pdfSrc = `/worksheets/${params.slug}/${params.slug}.pdf`;
 
   return (
-    <div>
-      <div className="page-header-wrapper">
-        <div className="page-header">
-          <div className="cds--grid">
-            <div className="cds--row">
-              <div className="cds--col">
-                <h1>{worksheet?.data?.title}</h1>
-              </div>
-            </div>
+      <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+          <h1>{worksheet?.data?.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="">
+          <Image src={screenshootSrc}
+              width={400}
+              height={400}
+              alt="Изображение рабочего листа"
+              unoptimized />
+          <a href={pdfSrc} className="cds--link">Скачать PDF</a>
           </div>
-        </div>
       </div>
-      <div className="container">
-        <div className="cds--grid">
-          <div className="cds--row">
-            <div className="cds--col-lg-10 cds--col-md-6 cds--col-sm-4">
-              <p>{worksheet?.data?.teaser}</p>
-            </div>
-          </div>
-          <div className="cds--row">
-            <div className="cds--col-lg-10 cds--col-md-5 cds--col-sm-4">
-              <div dangerouslySetInnerHTML={{ __html: content }} />
-            </div>
-
-            <div className="cds--col-lg-6 cds--col-md-3 cds--col-sm-4">
-              <div className="pdf">
-                <div className="images">
-                  <Image src={screenshootSrc}
-                    width={400}
-                    height={400}
-                    alt="Picture of the author"
-                    unoptimized />
-                </div>
-                <a href={pdfSrc} className="cds--link">Скачать PDF</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

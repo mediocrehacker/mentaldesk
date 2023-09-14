@@ -1,10 +1,13 @@
 export default async function Home() {
   return (
-    <main className="main">
-      <div className="description">
-        <h1>Программное обеспечение для проведения психологических опросников</h1>
-        <h3>Отслеживание результатов, информирование о лечении для психиатрических служб, психологов, психиатров и консультантов</h3>
+    <div className="hero h-[calc(100vh-120px)] bg-base-200">
+      <div className="hero-content text-center">
+        <div className="max-w-md">
+          <h1 className="text-5xl font-bold">Привет</h1>
+          <p className="py-6">Программное обеспечение для проведения психологических опросников</p>
+         <button className="btn btn-primary">Начните использовать бесплатно!</button>
+         </div>
       </div>
-    </main>
+   </div>
   )
 }

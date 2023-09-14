@@ -1,8 +1,13 @@
-import '@carbon/react/index.scss';
 import './global.scss';
 import Navbar from './components/Navbar'
 import { Footer } from './Footer'
 import Script from 'next/script';
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['cyrillic'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Mental Desk',
@@ -15,13 +20,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru">
-      <body>
-        <div className="layout">
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </div>
+    <html lang="ru" className={inter.className}>
+      <body className="min-h-screen">
+        <Navbar />
+        <main className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+          {children}
+        </main>
+        <Footer />
       <Script id="yandex-metrica" strategy="afterInteractive">
       {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();

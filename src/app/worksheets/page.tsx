@@ -6,30 +6,11 @@ export default async function WorksheetsPage() {
   const names = fs.readdirSync('./content/worksheets');
 
   return (
-    <div>
-      <div className="page-header-wrapper">
-        <div className="page-header">
-          <div className="cds--grid">
-            <div className="cds--row">
-              <div className="cds--col">
-                <h1>Рабочие Листы</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="cds--grid">
-          <div className="cds--row">
-            <div className="cds--col-lg-12 cds--col-md-6 cds--col-sm-4">
-              {names?.map((name) => {
-                return <Worksheet key={name} name={name} />;
-              })}
-
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+      <h1>Рабочие Листы</h1>
+          {names?.map((name) => {
+              return <Worksheet key={name} name={name} />;
+          })}
     </div>
   )
 }
@@ -40,11 +21,11 @@ function Worksheet({ name }: { name: string }) {
 
   return (
     <div>
-      <h2>
-        <Link href={`/worksheets/${name}`}>
+      <h3>
+        <Link className="link" href={`/worksheets/${name}`}>
           {worksheet?.data?.title}
         </Link>
-      </h2>
+      </h3>
       <p>{worksheet?.data?.teaser}</p>
     </div>
   );
