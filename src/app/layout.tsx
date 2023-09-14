@@ -23,7 +23,9 @@ export default function RootLayout({
     <html lang="ru" className={inter.className}>
       <body className="min-h-screen">
         <Navbar />
-        <main>{children}</main>
+        <main class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+          {children}
+        </main>
         <Footer />
       <Script id="yandex-metrica" strategy="afterInteractive">
       {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
