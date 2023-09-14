@@ -38,25 +38,6 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@carbon/icon-helpers@^10.44.0":
-  version "10.44.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.44.0.tgz#4308806bf903310d68240325a53ce400ef7dc9af"
-  integrity sha512-8gvP8Qr2pNspIUPiQRQQUB9gdklLxfs7JDIz4a/PUzon7IcVielpl08blh2IjpbDr/cZSje5fwn3CAInCKNb1g==
-
-"@carbon/icons-react@^11.21.0":
-  version "11.25.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icons-react/-/icons-react-11.25.0.tgz#0fe22e926a2e3f7995bf48bdc2785a21f024995f"
-  integrity sha512-YdILzQHI9UwMfjh4TH0XqTRXk4uZr/q6Q5lQSWfLOVE+qnSIc6XFKr60JFCWhab8dxcaSEmpTV5OcbVUoAQxQQ==
-  dependencies:
-    "@carbon/icon-helpers" "^10.44.0"
-    "@carbon/telemetry" "0.1.0"
-    prop-types "^15.7.2"
-
-"@carbon/telemetry@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@carbon/telemetry/-/telemetry-0.1.0.tgz#57b331cd5a855b4abbf55457456da8211624d879"
-  integrity sha512-kNWt0bkgPwGW0i5h7HFuljbKRXPvIhsKbB+1tEURAYLXoJg9iJLF1eGvWN5iVoFCS2zje4GR3OGOsvvKVe7Hlg==
-
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -3012,7 +2993,7 @@ prisma@^5.2.0:
   dependencies:
     "@prisma/engines" "5.2.0"
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
