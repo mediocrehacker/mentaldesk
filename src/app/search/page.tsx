@@ -39,7 +39,7 @@ export default async function WorksheetsPage({
       <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-8 mb-16 mx-auto">
       <h1>Результаты поиска</h1>
           {result?.map((worksheet) => {
-              return <Worksheet worksheet={worksheet?.item} />;
+            return <Worksheet key={worksheet?.item?.slug} worksheet={worksheet?.item} />;
           })}
       </div>
     </div>
