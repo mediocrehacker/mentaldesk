@@ -10,7 +10,7 @@ export default async function WorksheetsPage() {
   const names = fs.readdirSync(worksheetsDir);
 
   return (
-    <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+    <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-8 mb-16 mx-auto">
       <h1>Рабочие Листы</h1>
           {names?.map((name) => {
               return <Worksheet key={name} name={name} />;
