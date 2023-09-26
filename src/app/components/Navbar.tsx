@@ -22,6 +22,7 @@ export default function Navbar({user} : Props) {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li><Link href="/about">О Проекте</Link></li>
               <li><Link href="/worksheets">Рабочие листы</Link></li>
+              <li><Link href="/oprosniki">Опросники</Link></li>
               <li><Link href="/profile">Профайл</Link></li>
           </ul>
           </div>
@@ -31,6 +32,7 @@ export default function Navbar({user} : Props) {
           <ul className="menu menu-horizontal px-1">
           <li><Link href="/about">О Проекте</Link></li>
           <li><Link href="/worksheets">Рабочие листы</Link></li>
+          <li><Link href="/oprosniki">Опросники</Link></li>
           <li><Link href="/profile">Профайл</Link></li>
           </ul>
       </div>
@@ -52,6 +54,7 @@ export default function Navbar({user} : Props) {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li><Link href="/about">О Проекте</Link></li>
               <li><Link href="/worksheets">Рабочие листы</Link></li>
+              <li><Link href="/oprosniki">Опросники</Link></li>
               <li><Link href="/api/auth/signin">Регистрация</Link></li>
           </ul>
           </div>
@@ -61,6 +64,7 @@ export default function Navbar({user} : Props) {
           <ul className="menu menu-horizontal px-1">
           <li><Link href="/about">О Проекте</Link></li>
           <li><Link href="/worksheets">Рабочие листы</Link></li>
+          <li><Link href="/oprosniki">Опросники</Link></li>
           <li><Link href="/api/auth/signin">Регистрация</Link></li>
           </ul>
       </div>
