@@ -13,7 +13,7 @@ type Props = {
 export default function Navbar({user} : Props) {
   if (!!user) { 
   return (
-    <header className="navbar bg-base-100">
+    <header className="navbar bg-base-100 h-16">
       <div className="navbar-start">
           <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -45,7 +45,7 @@ export default function Navbar({user} : Props) {
 
 
   return (
-    <header className="navbar bg-base-100">
+    <header className="navbar bg-base-100 h-16">
       <div className="navbar-start">
           <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

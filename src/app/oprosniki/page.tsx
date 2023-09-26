@@ -3,14 +3,13 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
 
-const contentDir = path.join(process.cwd(), 'src', 'app', 'content')
+const oprosnikiDir = path.join(process.cwd(), 'src', 'app', 'content', 'oprosniki'); 
 
 export default async function OprosnikiPage() {
-  const oprosnikiDir = path.join(contentDir, 'oprosniki'); 
   const names = fs.readdirSync(oprosnikiDir);
 
   return (
-    <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+    <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-8 mb-16 mx-auto">
       <h1>Опросники</h1>
           {names?.map((name) => {
               return <Oprosnik key={name} name={name} />;
@@ -20,10 +19,8 @@ export default async function OprosnikiPage() {
 }
 
 function Oprosnik({ name }: { name: string }) {
-  const oprosnikiDir = path.join(contentDir, 'oprosniki'); 
   const file = fs.readFileSync(path.join(oprosnikiDir, `/${name}/content.mdx`));
   const oprosnik = matter(file);
-  console.log(oprosnik?.data);
   return (
     <div>
       <h3>

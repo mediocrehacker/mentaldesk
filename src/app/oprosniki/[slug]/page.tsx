@@ -48,7 +48,7 @@ export default async function OprosnikPage({ params }: { params: { slug: string 
           <Image className="max-w-xs md:max-w-lg" src={screenshootSrc}
               width={512}
               height={512}
-              alt="Изображение рабочего листа"
+              alt="Изображение опросника"
               unoptimized />
           <a href={pdfSrc} className="cds--link">Скачать PDF</a>
           </div>
