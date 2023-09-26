@@ -24,10 +24,6 @@ export default async function RootLayout({
 
   const session = await getServerSession(options)
 
-  // if (!session) {
-  //   redirect('/api/auth/signin?callbackUrl=/profile')
-  // }
-
   return (
     <html lang="ru" className={inter.className}>
       <body>
