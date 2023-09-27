@@ -37,7 +37,7 @@ export default async function OprosnikPage({ params }: { params: { slug: string 
   const file = fs.readFileSync(path.join(oprosnikiDir, `${params.slug}/content.mdx`));
   const oprosnik = matter(file);
   const content = await toHtml(oprosnik.content);
-  const screenshootSrc = `/oprosniki/${params.slug}/screenshoot.png`;
+  const screenshootSrc = `/oprosniki/${params.slug}/screenshot.png`;
   const pdfSrc = `/oprosniki/${params.slug}/${params.slug}.pdf`;
 
   return (
