@@ -16,6 +16,7 @@
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{pbox}
+\renewcommand{\familydefault}{\sfdefault}
 
 \author{Mental Desk}
 
@@ -107,4 +108,4 @@
 
 \newcommand{\yesno}[2]{\QItem{\Qq{#1}\yesnoticks{#2}}}
 \newcommand{\yesnoa}[2][]{\QItem[#1]{\Qq{#2}\yesnoticks{#3}}}
- o o% \newcommand{\yesno}[2]{\pbox{0.7\textwidth}{\setstretch{1}#1}\hfill\yesnoticks{#2}}
+% \newcommand{\yesno}[2]{\pbox{0.7\textwidth}{\setstretch{1}#1}\hfill\yesnoticks{#2}}

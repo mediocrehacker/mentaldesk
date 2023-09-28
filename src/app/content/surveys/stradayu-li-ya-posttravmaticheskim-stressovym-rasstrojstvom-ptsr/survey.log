@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  28 SEP 2023 22:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  28 SEP 2023 22:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -429,32 +429,19 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \c@itemoddeven=\count272
 \gb=\skip65
 
-../../shared/survey.cls:109: Illegal parameter number in definition of \\yesnoa
+../../shared/survey.cls:110: Illegal parameter number in definition of \\yesnoa
 .
 <to be read again> 
                    3
-l.109 ...[2][]{\QItem[#1]{\Qq{#2}\yesnoticks{#3}}}
+l.110 ...[2][]{\QItem[#1]{\Qq{#2}\yesnoticks{#3}}}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-
-../../shared/survey.cls:110: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110  o
-         o% \newcommand{\yesno}[2]{\pbox{0.7\textwidth}{\setstretch{1}#1}\hf...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 )
 LaTeX Font Info:    Trying to load font information for T2A+PTSans-TLF on input
- line 11.
+ line 9.
 
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/latex/paratype/T2APTSans-TLF.fd
@@ -469,23 +456,23 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./survey.aux)
 \openout1 = `survey.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Info: Redefining \th on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Info: Redefining \th on input line 9.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -538,79 +525,79 @@ x/context/base/mkii/supp-pdf.mkii
 \everyMPtoPDFconversion=\toks22
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 21.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 21.
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 21
+(Font)              <6> on input line 20.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 20
 .
 
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-Overfull \hbox (7.75pt too wide) in paragraph at lines 21--23
+Overfull \hbox (7.75pt too wide) in paragraph at lines 20--22
 [][][][][][]
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 21--23
+Overfull \hbox (7.75pt too wide) in paragraph at lines 20--22
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 24--25
+Overfull \hbox (7.75pt too wide) in paragraph at lines 23--24
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 26--27
+Overfull \hbox (7.75pt too wide) in paragraph at lines 25--26
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 28--29
+Overfull \hbox (7.75pt too wide) in paragraph at lines 27--28
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 30--31
+Overfull \hbox (7.75pt too wide) in paragraph at lines 29--30
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 32--33
+Overfull \hbox (7.75pt too wide) in paragraph at lines 31--32
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
@@ -623,7 +610,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 LaTeX Font Info:    Trying to load font information for TS1+PTSans-TLF on input
- line 41.
+ line 40.
 
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/latex/paratype/TS1PTSans-TLF.fd
@@ -653,18 +640,15 @@ Here is how much of TeX's memory you used:
 {/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdis
 t/fonts/enc/dvips/paratype/ptsans_ts1.enc}{/nix/store/kbg57ldwhh7s00zwl9c6dhjdf
 mc6igbj-texlive-combined-2022-texmfdist/fonts/enc/dvips/paratype/ptsans_t2a.enc
-}{/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/f
-onts/enc/dvips/cm-super/cm-super-t2a.enc}</nix/store/kbg57ldwhh7s00zwl9c6dhjdfm
-c6igbj-texlive-combined-2022-texmfdist/fonts/type1/paratype/ptsans/PTS55F.pfb><
-/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/fon
-ts/type1/paratype/ptsans/PTS75F.pfb></nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igb
-j-texlive-combined-2022-texmfdist/fonts/type1/public/cm-super/sfrm1200.pfb></ni
+}</nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/f
+onts/type1/paratype/ptsans/PTS55F.pfb></nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6i
+gbj-texlive-combined-2022-texmfdist/fonts/type1/paratype/ptsans/PTS75F.pfb></ni
 x/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/fonts/
 type1/public/wasy-type1/wasy10.pfb>
-Output written on survey.pdf (1 page, 53411 bytes).
+Output written on survey.pdf (1 page, 44254 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 28 PDF objects out of 1000 (max. 8388607)
+ 17 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
