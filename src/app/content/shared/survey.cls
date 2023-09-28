@@ -14,11 +14,8 @@
 \RequirePackage{color}
 \RequirePackage{forloop}
 \RequirePackage{ifthen}
-\RequirePackage{tikz}
-\RequirePackage{hyperref}
 \RequirePackage{setspace}
 \RequirePackage{pbox}
-
 
 \author{Mental Desk}
 
@@ -38,52 +35,17 @@
 \definecolor{warning}{RGB}{251, 189, 35}
 \definecolor{error}{RGB}{248, 114, 114}
 
-% Form
-\renewcommand*{\DefaultOptionsofRadio}{print,radio, radiosymbol=6, width=\baselineskip, bordercolor={black}, borderwidth=0pt}
-\renewcommand*{\DefaultOptionsofText}{print,bordercolor={black}, backgroundcolor=white, borderwidth=0pt}
+% \newcommand{\yesnoticks}[1]{%
+% \raisebox{-3.2pt}{\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
+%   \node[anchor=west,style={inner sep=2px}] (FieldYes) at (0cm,0cm) {\ChoiceMenu[radio=true,name=#1,width=\radiosize,height=\radiosize]{}{=Yes}};
+%   \node[anchor=west] (LabelYes) at ([xshift=0.7ex]FieldYes.east) {Yes};
+%   \node[anchor=west,style={inner sep=2px}] (FieldNo) at ([xshift=1ex]LabelYes.east) {\ChoiceMenu[radio=true,name=#1,width=\radiosize,height=\radiosize]{}{=No}};
+%   \node[anchor=west] (LabelNo) at ([xshift=0.7ex]FieldNo.east) {No};
+%   \draw [thick] ([xshift=-(\radiosize+0.15cm),yshift=-(\radiosize+0.15cm)]FieldYes.north east) rectangle (FieldYes.north east);
+%   \draw [thick] ([xshift=-(\radiosize+0.15cm),yshift=-(\radiosize+0.15cm)]FieldNo.north east) rectangle (FieldNo.north east);
+% \end{tikzpicture}}%
+% }
 
-\renewcommand{\LayoutTextField}[2]{% label, field
-\setbox0=\hbox{#1\unskip}\ifdim\wd0=0pt
-\setbox1=\hbox{#2\unskip}\ifdim\ht1>3ex
-% Multiline
-\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
-  \node[anchor=west] (TextFieldNode) at (0cm,0cm) {#2};
-  \draw [thick] (current bounding box.south west) rectangle (current bounding box.north east);
-\end{tikzpicture}%
-\else
-% Inline field, lowered a little bit to be better integrated into the text
-\raisebox{-3.2pt}{\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
-  \node[anchor=west] (TextFieldNode) at (0cm,0cm) {#2};
-  \draw[thick] ([yshift=-0.3ex]TextFieldNode.south west) -- ([yshift=-0.3ex]TextFieldNode.south east);
-\end{tikzpicture}}%
-\fi
-\else
-% Field with label below it
-\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
-    \node[anchor=west] (TextFieldNode) at (0cm,2ex) {#2};
-    \draw[thick] ([yshift=-0.3ex]TextFieldNode.south west) -- ([yshift=-0.3ex]TextFieldNode.south east);
-    \node[anchor=west,font=\footnotesize] at (0cm,-0.9ex) {#1};
-\end{tikzpicture}%
-\fi
-}
-\newcommand{\field}[2]{\TextField[width=#2]{#1}}
-\newcommand{\fieldinline}[2]{\TextField[width=#2,name=#1]{}}
-
-\newcommand{\radiosize}{0.33cm}
-\newcommand{\yesnoticks}[1]{%
-\raisebox{-3.2pt}{\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
-  \node[anchor=west,style={inner sep=2px}] (FieldYes) at (0cm,0cm) {\ChoiceMenu[radio=true,name=#1,width=\radiosize,height=\radiosize]{}{=Yes}};
-  \node[anchor=west] (LabelYes) at ([xshift=0.7ex]FieldYes.east) {Yes};
-  \node[anchor=west,style={inner sep=2px}] (FieldNo) at ([xshift=1ex]LabelYes.east) {\ChoiceMenu[radio=true,name=#1,width=\radiosize,height=\radiosize]{}{=No}};
-  \node[anchor=west] (LabelNo) at ([xshift=0.7ex]FieldNo.east) {No};
-  \draw [thick] ([xshift=-(\radiosize+0.15cm),yshift=-(\radiosize+0.15cm)]FieldYes.north east) rectangle (FieldYes.north east);
-  \draw [thick] ([xshift=-(\radiosize+0.15cm),yshift=-(\radiosize+0.15cm)]FieldNo.north east) rectangle (FieldNo.north east);
-\end{tikzpicture}}%
-}
-\newcommand{\yesno}[2]{\pbox{0.7\textwidth}{\setstretch{1}#1}\hfill\yesnoticks{#2}}
-
-% SURVEY
-        
 \newcommand{\Qq}[1]{#1}
 \newcommand{\QO}{$\Circle$}% or: $\ocircle$
 
@@ -103,19 +65,20 @@
 }
 
 \newlength{\qt}
+
 \newcommand{\Qtab}[2]{
-\setlength{\qt}{\linewidth}
-\addtolength{\qt}{-#1}
-\hfill\parbox[t]{\qt}{\raggedright #2}
+  \setlength{\qt}{\linewidth}
+  \addtolength{\qt}{-#1}
+  \hfill\parbox[t]{\qt}{\raggedright #2}
 }
 
 \newcounter{itemnummer}
 \newcommand{\Qitem}[2][]{% #1 optional, #2 notwendig
-\ifthenelse{\equal{#1}{}}{\stepcounter{itemnummer}}{}
-\ifthenelse{\equal{#1}{a}}{\stepcounter{itemnummer}}{}
-\begin{enumerate}[topsep=2pt,leftmargin=2em]
-\item[\textbf{\arabic{itemnummer}#1.}] #2
-\end{enumerate}
+  \ifthenelse{\equal{#1}{}}{\stepcounter{itemnummer}}{}
+  \ifthenelse{\equal{#1}{a}}{\stepcounter{itemnummer}}{}
+  \begin{enumerate}[topsep=2pt,leftmargin=2em]
+  \item[\textbf{\arabic{itemnummer}#1.}] #2
+  \end{enumerate}
 }
 
 \definecolor{bgodd}{rgb}{0.8,0.8,0.8}
@@ -134,3 +97,14 @@
 \setcounter{itemoddeven}{0}%
 }
 }
+
+\newcommand{\yesnoticks}[1]{
+  \begin{Qlist}
+  \item Да
+  \item Нет
+  \end{Qlist}
+}
+
+\newcommand{\yesno}[2]{\QItem{\Qq{#1}\yesnoticks{#2}}}
+\newcommand{\yesnoa}[2][]{\QItem[#1]{\Qq{#2}\yesnoticks{#3}}}
+ o o% \newcommand{\yesno}[2]{\pbox{0.7\textwidth}{\setstretch{1}#1}\hfill\yesnoticks{#2}}
