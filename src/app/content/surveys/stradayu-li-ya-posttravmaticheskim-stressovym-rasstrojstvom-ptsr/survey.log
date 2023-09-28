@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  28 SEP 2023 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  28 SEP 2023 22:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -398,12 +398,549 @@ Package: forloop 2006/09/18 v3.0 For Loops for LaTeX
 x/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ))
-\c@qr=\count266
-\c@ql=\count267
-\qt=\skip60
-\c@itemnummer=\count268
-\c@itemoddeven=\count269
-\gb=\skip61
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/frontendlayer/tikz.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/basiclayer/pgf.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/utilities/pgfrcs.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen151
+\pgfutil@tempdimb=\dimen152
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box52
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/utilities/pgfrcs.code.tex
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/basiclayer/pgfcore.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/systemlayer/pgfsys.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks24
+))
+\pgf@x=\dimen155
+\pgf@y=\dimen156
+\pgf@xa=\dimen157
+\pgf@ya=\dimen158
+\pgf@xb=\dimen159
+\pgf@yb=\dimen160
+\pgf@xc=\dimen161
+\pgf@yc=\dimen162
+\pgf@xd=\dimen163
+\pgf@yd=\dimen164
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count266
+\c@pgf@countb=\count267
+\c@pgf@countc=\count268
+\c@pgf@countd=\count269
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count270
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count271
+\pgfsyssoftpath@bigbuffer@items=\count272
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmath.code.tex
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathutil.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen165
+\pgfmath@count=\count273
+\pgfmath@box=\box53
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathcalc.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count274
+))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfint.code.tex)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen166
+\pgf@picmaxx=\dimen167
+\pgf@picminy=\dimen168
+\pgf@picmaxy=\dimen169
+\pgf@pathminx=\dimen170
+\pgf@pathmaxx=\dimen171
+\pgf@pathminy=\dimen172
+\pgf@pathmaxy=\dimen173
+\pgf@xx=\dimen174
+\pgf@xy=\dimen175
+\pgf@yx=\dimen176
+\pgf@yy=\dimen177
+\pgf@zx=\dimen178
+\pgf@zy=\dimen179
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen180
+\pgf@path@lasty=\dimen181
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen182
+\pgf@shorten@start@additional=\dimen183
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count275
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen184
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen185
+\pgf@pt@y=\dimen186
+\pgf@pt@temp=\dimen187
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen188
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen189
+\pgf@sys@shading@range@num=\count276
+\pgf@shadingcount=\count277
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box57
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box58
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen190
+\pgf@nodesepend=\dimen191
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/utilities/pgffor.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/utilities/pgfkeys.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/utilities/pgfkeys.code.tex))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pgf/math/pgfmath.sty
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/math/pgfmath.code.tex))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen192
+\pgffor@skip=\dimen193
+\pgffor@stack=\toks31
+\pgffor@toks=\toks32
+))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count278
+\pgfplotmarksize=\dimen194
+)
+\tikz@lastx=\dimen195
+\tikz@lasty=\dimen196
+\tikz@lastxsaved=\dimen197
+\tikz@lastysaved=\dimen198
+\tikz@lastmovetox=\dimen199
+\tikz@lastmovetoy=\dimen256
+\tikzleveldistance=\dimen257
+\tikzsiblingdistance=\dimen258
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count279
+\tikznumberofchildren=\count280
+\tikznumberofcurrentchild=\count281
+\tikz@fig@count=\count282
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count283
+\pgfmatrixcurrentcolumn=\count284
+\pgf@matrix@numberofcolumns=\count285
+)
+\tikz@expandcount=\count286
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count287
+)
+\@linkdim=\dimen259
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count290
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 3164.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count291
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen260
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count292
+\Field@Width=\dimen261
+\Fld@charsize=\dimen262
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip60
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/pbox/pbox.sty
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count298
+\calc@Bcount=\count299
+\calc@Adimen=\dimen263
+\calc@Bdimen=\dimen264
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count300
+\calc@Cskip=\skip63
+)
+\pb@xlen=\skip64
+)
+\c@qr=\count301
+\c@ql=\count302
+\qt=\skip65
+\c@itemnummer=\count303
+\c@itemoddeven=\count304
+\gb=\skip66
 )
 LaTeX Font Info:    Trying to load font information for T2A+PTSans-TLF on input
  line 11.
@@ -416,8 +953,8 @@ A/PTSans-TLF.
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count270
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box63
 ) (./survey.aux)
 \openout1 = `survey.aux'.
 
@@ -436,6 +973,10 @@ LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Info: Redefining \th on input line 11.
 
@@ -477,67 +1018,91 @@ LaTeX Info: Redefining \th on input line 11.
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count271
-\scratchdimen=\dimen151
-\scratchbox=\box53
-\nofMPsegments=\count272
-\nofMParguments=\count273
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count274
-\MPscratchDim=\dimen152
-\MPnumerator=\count275
-\makeMPintoPDFobject=\count276
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count306
+\scratchdimen=\dimen265
+\scratchbox=\box64
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen266
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks34
 )
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 11.
+ (./survey.out) (./survey.out)
+\@outlinefile=\write4
+\openout4 = `survey.out'.
+
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 22.
+
+
+(/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
+x/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+){/nix/store/f9wk022a4rysbmmb3dzgvfcvchjlr2jq-texlive-combined-2022/share/texmf
+-var/fonts/map/pdftex/updmap/pdftex.map}
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 25.
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 25
+(Font)              <6> on input line 22.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 22
 .
 
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-Overfull \hbox (7.75pt too wide) in paragraph at lines 25--57
+Overfull \hbox (7.75pt too wide) in paragraph at lines 30--62
 [][][][][][]
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 25--57
+Overfull \hbox (7.75pt too wide) in paragraph at lines 30--62
 [][][][][][]
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 25--57
+Overfull \hbox (7.75pt too wide) in paragraph at lines 30--62
 [][][][][][]
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 25--57
+Overfull \hbox (7.75pt too wide) in paragraph at lines 30--62
 [][][][][][]
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 25--57
+Overfull \hbox (7.75pt too wide) in paragraph at lines 30--62
 [][][][][][]
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 25--57
+Overfull \hbox (7.75pt too wide) in paragraph at lines 30--62
 [][][][][][]
  []
 
 
-Overfull \hbox (7.75pt too wide) in paragraph at lines 25--57
+Overfull \hbox (7.75pt too wide) in paragraph at lines 30--62
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--57
+Underfull \hbox (badness 10000) in paragraph at lines 30--62
 
  []
 
@@ -550,45 +1115,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 LaTeX Font Info:    Trying to load font information for TS1+PTSans-TLF on input
- line 65.
+ line 70.
 
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/latex/paratype/TS1PTSans-TLF.fd
 File: TS1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for TS
 1/PTSans-TLF.
-) [1{/nix/store/f9wk022a4rysbmmb3dzgvfcvchjlr2jq-texlive-combined-2022/share/te
-xmf-var/fonts/map/pdftex/updmap/pdftex.map}
+) [1
 
-]
-(./survey.aux
+] (./survey.aux
 LaTeX Font Info:    Trying to load font information for OT1+PTSans-TLF on input
- line 5.
+ line 19.
 
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
 x/latex/paratype/OT1PTSans-TLF.fd
 File: OT1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for OT
 1/PTSans-TLF.
-)) ) 
+))
+Package rerunfilecheck Info: File `survey.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 4713 strings out of 476024
- 81221 string characters out of 5769556
- 1860388 words of memory out of 5000000
- 25098 multiletter control sequences out of 15000+600000
- 552448 words of font info for 58 fonts, out of 8000000 for 9000
+ 22673 strings out of 476024
+ 436476 string characters out of 5769556
+ 1869388 words of memory out of 5000000
+ 42705 multiletter control sequences out of 15000+600000
+ 552808 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,76p,312b,422s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdis
-t/fonts/enc/dvips/paratype/ptsans_ts1.enc}{/nix/store/kbg57ldwhh7s00zwl9c6dhjdf
-mc6igbj-texlive-combined-2022-texmfdist/fonts/enc/dvips/paratype/ptsans_t2a.enc
-}</nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/f
-onts/type1/paratype/ptsans/PTS55F.pfb></nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6i
-gbj-texlive-combined-2022-texmfdist/fonts/type1/paratype/ptsans/PTS75F.pfb></ni
-x/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/fonts/
-type1/public/wasy-type1/wasy10.pfb>
-Output written on survey.pdf (1 page, 44248 bytes).
+ 117i,11n,118p,413b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/
+fonts/enc/dvips/paratype/ptsans_ts1.enc}{/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc
+6igbj-texlive-combined-2022-texmfdist/fonts/enc/dvips/paratype/ptsans_t2a.enc}<
+/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/fon
+ts/type1/paratype/ptsans/PTS55F.pfb></nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igb
+j-texlive-combined-2022-texmfdist/fonts/type1/paratype/ptsans/PTS75F.pfb></nix/
+store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/fonts/ty
+pe1/urw/zapfding/uzdr.pfb></nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-
+combined-2022-texmfdist/fonts/type1/public/wasy-type1/wasy10.pfb>
+Output written on survey.pdf (1 page, 51732 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 54 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 47 words of extra memory for PDF output out of 10000 (max. 10000000)
 
