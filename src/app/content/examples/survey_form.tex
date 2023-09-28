@@ -1,0 +1,62 @@
+\documentclass[parskip=full]{scrartcl}
+
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{pbox}
+
+\renewcommand*{\DefaultOptionsofRadio}{print,radio, radiosymbol=6, width=\baselineskip, bordercolor={black}, borderwidth=0pt}
+\renewcommand*{\DefaultOptionsofText}{print,bordercolor={black}, backgroundcolor=white, borderwidth=0pt}
+
+\renewcommand{\LayoutTextField}[2]{% label, field
+\setbox0=\hbox{#1\unskip}\ifdim\wd0=0pt
+\setbox1=\hbox{#2\unskip}\ifdim\ht1>3ex
+% Multiline
+\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
+  \node[anchor=west] (TextFieldNode) at (0cm,0cm) {#2};
+  \draw [thick] (current bounding box.south west) rectangle (current bounding box.north east);
+\end{tikzpicture}%
+\else
+% Inline field, lowered a little bit to be better integrated into the text
+\raisebox{-3.2pt}{\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
+  \node[anchor=west] (TextFieldNode) at (0cm,0cm) {#2};
+  \draw[thick] ([yshift=-0.3ex]TextFieldNode.south west) -- ([yshift=-0.3ex]TextFieldNode.south east);
+\end{tikzpicture}}%
+\fi
+\else
+% Field with label below it
+\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
+    \node[anchor=west] (TextFieldNode) at (0cm,2ex) {#2};
+    \draw[thick] ([yshift=-0.3ex]TextFieldNode.south west) -- ([yshift=-0.3ex]TextFieldNode.south east);
+    \node[anchor=west,font=\footnotesize] at (0cm,-0.9ex) {#1};
+\end{tikzpicture}%
+\fi
+}
+\newcommand{\field}[2]{\TextField[width=#2]{#1}}
+\newcommand{\fieldinline}[2]{\TextField[width=#2,name=#1]{}}
+
+\newcommand{\radiosize}{0.33cm}
+\newcommand{\yesnoticks}[1]{%
+\raisebox{-3.2pt}{\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
+  \node[anchor=west,style={inner sep=2px}] (FieldYes) at (0cm,0cm) {\ChoiceMenu[radio=true,name=#1,width=\radiosize,height=\radiosize]{}{=Yes}};
+  \node[anchor=west] (LabelYes) at ([xshift=0.7ex]FieldYes.east) {Yes};
+  \node[anchor=west,style={inner sep=2px}] (FieldNo) at ([xshift=1ex]LabelYes.east) {\ChoiceMenu[radio=true,name=#1,width=\radiosize,height=\radiosize]{}{=No}};
+  \node[anchor=west] (LabelNo) at ([xshift=0.7ex]FieldNo.east) {No};
+  \draw [thick] ([xshift=-(\radiosize+0.15cm),yshift=-(\radiosize+0.15cm)]FieldYes.north east) rectangle (FieldYes.north east);
+  \draw [thick] ([xshift=-(\radiosize+0.15cm),yshift=-(\radiosize+0.15cm)]FieldNo.north east) rectangle (FieldNo.north east);
+\end{tikzpicture}}%
+}
+\newcommand{\yesno}[2]{\pbox{0.7\textwidth}{\setstretch{1}#1}\hfill\yesnoticks{#2}}
+
+\begin{document}
+    \begin{Form}
+        \field{name}{0.3\linewidth}\hfill\field{phone}{0.3\linewidth}\hfill\field{address}{0.3\linewidth}%
+
+        I would like to bring some \fieldinline{things}{4cm} to the party.
+
+        \yesno{I like Pets}{pets}
+
+        \yesno{This is a very long sentence to show what happens if it does not fit in one line.}{lines}
+
+    \end{Form}
+\end{document}
