@@ -16,14 +16,19 @@
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{pbox}
-\renewcommand{\familydefault}{\sfdefault}
 
 \author{Mental Desk}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 \geometry{ a4paper, lmargin=32pt, rmargin=32pt, bmargin=48pt, tmargin=48pt}
 
 \fancyhf{}
 \pagestyle{fancy}
+
+\fancyfoot[L]{Предоставлено \textbf{MentalDesk}}
+\fancyfoot[R]{\footnotesize{© 2023 MentalDesk.ru}}
+
 
 % Colors
 \definecolor{primary}{RGB}{100, 26, 230}
@@ -60,7 +65,7 @@
 
 \newenvironment{Qlist}{%
 \renewcommand{\labelitemi}{\QO}
-\begin{itemize}[leftmargin=1.5em,topsep=-.5em]
+\begin{itemize}[leftmargin=.0em,topsep=-.5em]
 }{%
 \end{itemize}
 }
@@ -69,7 +74,7 @@
 
 \newcommand{\Qtab}[2]{
   \setlength{\qt}{\linewidth}
-  \addtolength{\qt}{-#1}
+  \addtolength{\qt}{#1}
   \hfill\parbox[t]{\qt}{\raggedright #2}
 }
 
@@ -100,12 +105,11 @@
 }
 
 \newcommand{\yesnoticks}[1]{
-  \begin{Qlist}
-  \item Да
-  \item Нет
-  \end{Qlist}
+  \renewcommand{\labelitemi}{\QO}
+  \begin{itemize}[leftmargin=.0em,topsep=-.5em]
+  \item[]{\Qtab{5.5cm}{\QO{} Да \hskip.5cm \QO{} Нет}}
+  \end{itemize}
 }
 
 \newcommand{\yesno}[2]{\QItem{\Qq{#1}\yesnoticks{#2}}}
-\newcommand{\yesnoa}[2][]{\QItem[#1]{\Qq{#2}\yesnoticks{#3}}}
-% \newcommand{\yesno}[2]{\pbox{0.7\textwidth}{\setstretch{1}#1}\hfill\yesnoticks{#2}}
+\newcommand{\yesnoa}[2][]{\QItem[#1]{\Qq{#2}\yesnoticks{#2}}}

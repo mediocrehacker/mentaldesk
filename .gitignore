@@ -38,4 +38,5 @@ next-env.d.ts
 .netlify
 
 # latex
-.log
+*.log
+*.aux
