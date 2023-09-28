@@ -37,8 +37,8 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
   const file = fs.readFileSync(path.join(surveysDir, `${params.slug}/content.mdx`));
   const survey = matter(file);
   const content = await toHtml(survey.content);
-  const screenshootSrc = `/surveys/${params.slug}/screenshot.png`;
-  const pdfSrc = `/surveys/${params.slug}/${params.slug}.pdf`;
+  const screenshootSrc = `/surveys/${params.slug}/screenshot-1.png`;
+  const pdfSrc = `/surveys/${params.slug}/survey.pdf`;
 
   return (
       <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
