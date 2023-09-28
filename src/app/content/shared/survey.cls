@@ -21,8 +21,6 @@
 
 \fancyhf{}
 \pagestyle{fancy}
-% \usefont{T2A}{PTSerifCaption-TLF}{m}{n}
-% \usefont{T2A}{PTSans-TLF}{m}{n}
 
 % Colors
 \definecolor{primary}{RGB}{100, 26, 230}
@@ -85,10 +83,3 @@
 \setcounter{itemoddeven}{0}%
 }
 }
-
-% Header 
-\fancyhead[L]{\textbf{Посттравматическое стрессовое расстройство}}
-
-% Footer
-\fancyfoot[L]{Предоставлено \textbf{MentalDesk}}
-\fancyfoot[R]{\footnotesize{© 2023 MentalDesk.ru}}

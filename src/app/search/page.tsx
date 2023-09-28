@@ -7,6 +7,12 @@ import Search from '../components/Search'
 import Slogan from '../components/Slogan'
 
 const worksheetsDir = path.join(process.cwd(), 'src', 'app', 'content', 'worksheets'); 
+const surveysDir = path.join(process.cwd(), 'src', 'app', 'content', 'surveys'); 
+
+enum Doc{
+  Worksheet,
+  Survey,
+}
 
 export default async function WorksheetsPage({
   params,
@@ -15,20 +21,23 @@ export default async function WorksheetsPage({
   params: { slug: string }
   searchParams: { [key: string]: string } })
 {
-  const q = searchParams.q!;
-  const slugs = fs.readdirSync(worksheetsDir);
-  const worksheets = slugs.map((slug) => {
+  const q = searchParams.q! || '';
+
+  const worksheets = fs.readdirSync(worksheetsDir).map((slug) => {
     const file = fs.readFileSync(path.join(worksheetsDir, `/${slug}/content.mdx`));
-    return { slug: slug, file: matter(file)};
+    return { slug: slug, kind: Doc.Worksheet, file: matter(file)};
   });
 
-  const fuse = new Fuse(worksheets, {
+  const surveys = fs.readdirSync(surveysDir).map((slug) => {
+    const file = fs.readFileSync(path.join(surveysDir, `/${slug}/content.mdx`));
+    return { slug: slug, kind: Doc.Survey, file: matter(file)};
+  });
+
+  const docs = worksheets.concat(surveys);
+  
+  const fuse = new Fuse(docs, {
     keys: ['file.data.title', 'file.data.teaser', 'file.content']
   });
-  
-  // if (!q) {
-  //   return (<p> Can't find </p>)
-  // }
 
   const result = fuse.search(q);
 
@@ -47,11 +56,12 @@ export default async function WorksheetsPage({
 }
 
 function Worksheet({ worksheet }: any) {
+  const kind = Doc[worksheet.kind].toLowerCase();
 
   return (
     <div>
       <h3>
-        <Link className="link" href={`/worksheets/${worksheet?.slug}`}>
+        <Link className="link" href={`/${kind}s/${worksheet?.slug}`}>
           {worksheet?.file?.data?.title}
         </Link>
       </h3>
