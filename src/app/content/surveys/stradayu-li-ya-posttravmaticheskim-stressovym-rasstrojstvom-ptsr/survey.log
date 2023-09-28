@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  28 SEP 2023 13:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  28 SEP 2023 21:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,11 @@ entering extended mode
 **survey.tex
 (./survey.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (./survey.cls
+L3 programming layer <2023-02-22> (../shared/survey.cls
+
+LaTeX Warning: You have requested document class `../shared/survey',
+               but the document class provides `survey'.
+
 Document Class: survey 2023/09/28 Survey Latex class
 
 (/nix/store/kbg57ldwhh7s00zwl9c6dhjdfmc6igbj-texlive-combined-2022-texmfdist/te
@@ -608,10 +612,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 4720 strings out of 476024
- 81267 string characters out of 5769556
+ 4722 strings out of 476024
+ 81337 string characters out of 5769556
  1861388 words of memory out of 5000000
- 25104 multiletter control sequences out of 15000+600000
+ 25105 multiletter control sequences out of 15000+600000
  552448 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,11n,76p,312b,422s stack positions out of 10000i,1000n,20000p,200000b,200000s
