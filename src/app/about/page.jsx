@@ -1,4 +1,4 @@
-export default async function AboutPage() {
+export default function AboutPage() {
 
   return (
     <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
