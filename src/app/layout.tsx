@@ -29,7 +29,7 @@ export default async function RootLayout({
       <body>
       <div id="app">
         <Navbar user={session?.user} />
-        <main className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+        <main className="wrapper ">
           {children}
         </main>
         <Footer />

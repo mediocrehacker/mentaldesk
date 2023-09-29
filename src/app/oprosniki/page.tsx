@@ -10,9 +10,9 @@ export default async function SurveysPage() {
   const names = fs.readdirSync(surveysDir);
 
   return (
-    <div className="max-w-screen-xl mb-16">
-      <h1 className="text-4xl font-bold m-8">Опросники</h1>
-      <div className="flex flex-wrap gap-8 justify-center"> 
+    <div className="">
+      <h1 className="text-4xl font-bold lg:pl-[19.5rem]">Опросники</h1>
+      <div className="flex flex-wrap gap-8 mt-8"> 
           {names?.map((name) => {
               return <Survey key={name} name={name} />;
           })}
@@ -28,7 +28,7 @@ function Survey({ name }: { name: string }) {
   const pdfSrc = `/surveys/${name}/survey.pdf`;
 
   return (
-    <div className="card w-[320px] md:w-[420px] lg:w-[560px] bg-neutral text-neutral-content lg:card-side bg-base-100 shadow-xl">
+    <div className="card w-[320px] md:w-[420px] lg:w-[450px] xl:w-[550px] bg-neutral text-neutral-content lg:card-side bg-base-100 shadow-xl">
 
       <figure className="lg:w-1/2">
        <Link href={`/oprosniki/${name}`}>
