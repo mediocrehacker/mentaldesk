@@ -5,13 +5,14 @@ import matter from 'gray-matter';
 import Fuse from 'fuse.js';
 import Search from '../components/Search'
 import Slogan from '../components/Slogan'
+import ToolCard from '../components/ToolCard'
 
 const worksheetsDir = path.join(process.cwd(), 'src', 'app', 'content', 'worksheets'); 
 const surveysDir = path.join(process.cwd(), 'src', 'app', 'content', 'surveys'); 
 
 enum Doc{
-  Worksheet,
-  Survey,
+  Worksheet="worksheet",
+  Survey="oprosnik",
 }
 
 export default async function WorksheetsPage({
@@ -42,30 +43,52 @@ export default async function WorksheetsPage({
   const result = fuse.search(q);
 
   return (
-    <div className="g-base-200 lg:pl-[19.5rem]">
+    <div className="g-base-200">
       <Slogan />
       <Search value={q} />
-      <div className="prose max-w-none">
+      <div className="">
       <h1>Результаты поиска</h1>
+      <div className="flex flex-wrap gap-8 mt-8"> 
           {result?.map((worksheet) => {
             return <Worksheet key={worksheet?.item?.slug} worksheet={worksheet?.item} />;
           })}
+      </div>
       </div>
     </div>
   )
 }
 
 function Worksheet({ worksheet }: any) {
-  const kind = Doc[worksheet.kind].toLowerCase();
-
+  switch(worksheet.kind) {
+    case "worksheet": {
   return (
-    <div>
-      <h3>
-        <Link className="link" href={`/${kind}s/${worksheet?.slug}`}>
-          {worksheet?.file?.data?.title}
-        </Link>
-      </h3>
-      <p>{worksheet?.file?.data?.teaser}</p>
-    </div>
+    toolCardWorksheet(worksheet)
   );
+      break;
+    }
+    case "oprosnik": {
+      return (
+    toolCardSurvey(worksheet)
+      );
+      break;
+    }
+  }
+  
+  
+}
+
+function toolCardWorksheet(worksheet: any) {
+  const name = worksheet?.slug;
+  const screenshotSrc = `/worksheets/${name}/screenshot-1.png`;
+  const pdfSrc = `/worksheets/${name}/worksheet.pdf`;
+
+  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet.file} kindLabel="Рабочий Лист" kind="worksheets" />;
+}
+
+function toolCardSurvey(worksheet: any) {
+  const name = worksheet?.slug;
+  const screenshotSrc = `/surveys/${name}/screenshot-1.png`;
+  const pdfSrc = `/surveys/${name}/survey.pdf`;
+
+  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet.file} kindLabel="Опросник" kind="oprosniki" />;
 }

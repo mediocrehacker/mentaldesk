@@ -2,6 +2,7 @@ import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
+import ToolCard from '../components/ToolCard'
 
 const contentDir = path.join(process.cwd(), 'src', 'app', 'content')
 
@@ -10,28 +11,21 @@ export default async function WorksheetsPage() {
   const names = fs.readdirSync(worksheetsDir);
 
   return (
-    <div className="prose max-w-none lg:pl-[19.5rem]">
-      <h1>Рабочие Листы</h1>
-          {names?.map((name) => {
-              return <Worksheet key={name} name={name} />;
-          })}
+    <div className="">
+      <h1 className="text-4xl font-bold lg:pl-[19.5rem]">Рабочие Листы</h1>
+      <div className="flex flex-wrap gap-8 mt-8"> 
+        {names?.map((name) => toolCard(name))}
+      </div>
     </div>
   )
 }
 
-function Worksheet({ name }: { name: string }) {
+function toolCard(name: string) {
   const worksheetsDir = path.join(contentDir, 'worksheets'); 
   const file = fs.readFileSync(path.join(worksheetsDir, `/${name}/content.mdx`));
   const worksheet = matter(file);
+  const screenshotSrc = `/worksheets/${name}/screenshot-1.png`;
+  const pdfSrc = `/worksheets/${name}/worksheet.pdf`;
 
-  return (
-    <div>
-      <h3>
-        <Link className="link" href={`/worksheets/${name}`}>
-          {worksheet?.data?.title}
-        </Link>
-      </h3>
-      <p>{worksheet?.data?.teaser}</p>
-    </div>
-  );
+  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet} kindLabel="Рабочий Лист" kind="worksheets" />;
 }
