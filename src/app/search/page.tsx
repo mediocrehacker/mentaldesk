@@ -42,10 +42,10 @@ export default async function WorksheetsPage({
   const result = fuse.search(q);
 
   return (
-    <div className="g-base-200">
+    <div className="g-base-200 lg:pl-[19.5rem]">
       <Slogan />
       <Search value={q} />
-      <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-8 mb-16 mx-auto">
+      <div className="prose max-w-none">
       <h1>Результаты поиска</h1>
           {result?.map((worksheet) => {
             return <Worksheet key={worksheet?.item?.slug} worksheet={worksheet?.item} />;

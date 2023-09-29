@@ -41,7 +41,7 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
   const pdfSrc = `/surveys/${params.slug}/survey.pdf`;
 
   return (
-      <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+      <div className="prose max-w-none lg:pl-[19.5rem]">
           <h1>{survey?.data?.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content }} />
           <div className="">

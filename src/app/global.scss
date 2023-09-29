@@ -8,3 +8,11 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1280px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}

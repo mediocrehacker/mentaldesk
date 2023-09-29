@@ -41,7 +41,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const pdfSrc = `/worksheets/${params.slug}/${params.slug}.pdf`;
 
   return (
-      <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+    <div className="prose max-w-none lg:pl-[19.5rem]">
           <h1>{worksheet?.data?.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content }} />
           <div className="">
