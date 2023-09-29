@@ -6,13 +6,11 @@ type User = {
     image?: string | null | undefined;
 } | undefined
 
-type Props = {
-    user: User
-}
-
-export default function Navbar({user} : Props) {
+export default function Navbar() {
+  let user = true;
   if (!!user) { 
   return (
+
     <header className="navbar bg-base-100 h-16">
       <div className="navbar-start">
           <div className="dropdown">
@@ -37,7 +35,7 @@ export default function Navbar({user} : Props) {
           </ul>
       </div>
     <div className="navbar-end">
-      <Link className="btn" href="/api/auth/signout">Выход</Link>
+      <Link className="btn" href="/api/auth/signin">Вход</Link>
     </div>
     </header>
   )

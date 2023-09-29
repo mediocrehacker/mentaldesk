@@ -13,6 +13,7 @@ export const Footer = () => (
     <header className="footer-title">Инструменты</header> 
     <Link href="/worksheets" className="link link-hover">Рабочие листы</Link> 
     <Link href="/oprosniki" className="link link-hover">Опросники</Link> 
+    <Link href="/api/auth/signout" className="link link-hover">Выход</Link>
   </nav> 
   <nav>
     <header className="footer-title">О Проекте</header> 
