@@ -13,13 +13,13 @@ type Props = {
 export default function ToolCard(props: Props) { 
 
   return (
-    <div className="card w-[320px] md:w-[420px] lg:w-[450px] xl:w-[550px] bg-neutral text-neutral-content lg:card-side bg-base-100 shadow-xl">
-      <figure className="lg:w-1/2">
+    <div className="card w-[320px] md:w-[420px] lg:w-[450px] xl:w-[550px] bg-neutral text-neutral-content lg:card-side bg-base-100">
+      <figure className="lg:w-1/3">
       <Link href={`/${props.kind}/${props.name}`}>
        <Img src={props.screenshotSrc} title={props.survey?.data?.title} /> 
        </Link>
       </figure>
-      <div className="card-body lg:w-1/2">
+      <div className="card-body lg:w-2/3">
       <Link href={`/${props.kind}/${props.name}`}><h2 className="card-title">{props.survey?.data?.title}</h2></Link>
       <p>{props.kindLabel}</p>
       <div className="card-actions justify-end">
@@ -32,8 +32,8 @@ export default function ToolCard(props: Props) {
 
 function Img({src, title}: {src: string, title: string}) {
   return (
-    <div className="h-full flex justify-center items-end relative">
-      <Image className="object-left-top object-none max-w-64 max-h-64 lg:max-w-32 lg:max-h-48 mt-8" src={src}
+    <div className="p-4 pt-16 lg:pt-4">
+      <Image className="" src={src}
              width={200}
              height={200}
              alt={title}
