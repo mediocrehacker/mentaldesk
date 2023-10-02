@@ -23,8 +23,10 @@
 
 \geometry{ a4paper, lmargin=32pt, rmargin=32pt, bmargin=48pt, tmargin=48pt}
 
+% Header 
 \fancyhf{}
 \pagestyle{fancy}
+\newcommand{\CustomHeader}[1]{\fancyhead[L]{\textbf{#1}}}
 
 \fancyfoot[L]{Предоставлено \textbf{MentalDesk}}
 \fancyfoot[R]{\footnotesize{© 2023 MentalDesk.ru}}
@@ -70,6 +72,14 @@
 \end{itemize}
 }
 
+\newenvironment{QTlist}{%
+\renewcommand{\labelitemi}{\QO}
+\begin{itemize}[leftmargin=.0em,topsep=-.5em]
+}{%
+\end{itemize}
+}
+
+
 \newlength{\qt}
 
 \newcommand{\Qtab}[2]{
@@ -113,3 +123,14 @@
 
 \newcommand{\yesno}[2]{\QItem{\Qq{#1}\yesnoticks{#2}}}
 \newcommand{\yesnoa}[2][]{\QItem[#1]{\Qq{#2}\yesnoticks{#2}}}
+
+
+\newcommand{\four}[1]{%
+\QItem{ 
+\Qq{#1}
+\vspace{.5\baselineskip}
+\begin{Qlist}
+\item[]{\Qtab{5.5cm}{\QO{} Никогда \hskip.5cm \QO{} Изредка \hskip.5cm \QO{} Часто \hskip.5cm \QO{} Всегда}}
+\end{Qlist}
+}%
+}
