@@ -38,7 +38,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
   const screenshootSrc = `/worksheets/${params.slug}/original-1.png`;
-  const pdfSrc = `/worksheets/${params.slug}/${params.slug}.pdf`;
+  const pdfSrc = `/worksheets/${params.slug}/worksheet.pdf`;
 
   return (
       <div className="">

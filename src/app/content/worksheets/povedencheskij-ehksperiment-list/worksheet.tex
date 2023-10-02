@@ -1,0 +1,84 @@
+\documentclass{../../shared/survey}
+
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\fancyhead[L]{\textbf{Поведенческий эксперимент (вертикальный формат)}}
+
+\makeatletter
+\newcommand{\DrawLine}{%
+  \begin{tikzpicture}
+  \path[use as bounding box] (0,0) -- (\linewidth,0);
+  \draw[color=black!75!black,dashed,dash phase=2pt]
+        (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
+        (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
+  \end{tikzpicture}%
+  }
+\makeatother
+
+\begin{document}
+
+\section*{\huge{Поведенческий эксперимент}}
+
+\begin{flushleft}
+\large{\textbf{Часть 1:} Прогноз}
+\end{flushleft}
+
+
+\begin{tcolorbox}[standard jigsaw, opacityback=0, top=0]
+
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Мысли}} \\
+Какую мысль или убеждение вы бы хотели проверить?
+}
+\DrawLine
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Эксперимент}} \\
+Как вы узнаете, что ваш эксперимент удался?
+}
+
+\DrawLine
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Прогноз}} \\
+Каков ваш прогноз? \\
+Как вы узнаете, что ваш эксперимент удался?
+\begin{tcolorbox}[standard jigsaw, enlarge by=-4mm, height=2.8cm, width=6cm, boxsep=4mm, flush right]
+\center{Какие ощущения вы ожидаете после эксперимента?}
+\end{tcolorbox}
+}
+
+\end{tcolorbox}
+
+
+\begin{flushleft}
+\large{\textbf{Часть 2:} Результат}
+\end{flushleft}
+
+
+\begin{tcolorbox}[standard jigsaw,opacityback=0, top=0]
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Результат}} \\
+Что произошло во время эксперимента? \\
+\begin{tcolorbox}[standard jigsaw, enlarge by=-7mm, height=2.8cm, width=6cm, boxsep=4mm, flush right]
+\center{Какие ощущения вы испытали после эксперимента?}
+\end{tcolorbox}
+}
+
+\DrawLine
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Новые идеи}} \\
+Чему вы научились? \\
+Учитывая данные эксперимента, каковы ваши новые идеи?}
+
+\end{tcolorbox}
+
+\end{document}
