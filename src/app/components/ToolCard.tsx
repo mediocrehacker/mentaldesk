@@ -34,8 +34,8 @@ function Img({src, title}: {src: string, title: string}) {
   return (
     <div className="p-4 pt-16 lg:pt-4">
       <Image className="" src={src}
-             width={200}
-             height={200}
+             width={192}
+             height={272}
              alt={title}
              placeholder="blur"
              blurDataURL={rgbDataURL(255, 255, 255)}

@@ -16,7 +16,6 @@ function HeroSearch() {
         <div className="max-w-4xl">
           <Slogan />
           <Search value=""/>
-          <Link href="/api/auth/signin" className="btn my-6 btn-primary">Начните использовать бесплатно!</Link>
         </div>
       </div>
    </div>
