@@ -25,9 +25,9 @@ function toolCard(name: string) {
   const file = fs.readFileSync(path.join(worksheetsDir, `/${name}/content.mdx`));
   const worksheet = matter(file);
   const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${name}/original-1.png`
-  const pdfSrc = `/worksheets/${name}/worksheet.pdf`;
+  const pdfLink= `/worksheets/${name}/download`;
 
   return (
-    <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet} kindLabel="Рабочий Лист" kind="worksheets" />
+    <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfLink={pdfLink} survey={worksheet} kindLabel="Рабочий Лист" kind="worksheets" />
   )
 }

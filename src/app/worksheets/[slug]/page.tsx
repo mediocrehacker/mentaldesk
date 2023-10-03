@@ -38,7 +38,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
   const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${params.slug}/original-1.png`
-  const pdfSrc = `/worksheets/${params.slug}/worksheet.pdf`;
+  const pdfSrc = `/worksheets/${params.slug}/download`;
 
   return (
       <div className="">

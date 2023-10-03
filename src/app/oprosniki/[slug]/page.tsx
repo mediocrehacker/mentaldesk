@@ -38,7 +38,7 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
   const survey = matter(file);
   const content = await toHtml(survey.content);
   const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/surveys/${params.slug}/original-1.png`
-  const pdfSrc = `/surveys/${params.slug}/survey.pdf`;
+  const pdfSrc = `/oprosniki/${params.slug}/download`;
 
   return (
       <div className="">

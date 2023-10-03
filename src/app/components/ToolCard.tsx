@@ -4,7 +4,7 @@ import Link from 'next/link'
 type Props = {
   name: string,
   screenshotSrc: string,
-  pdfSrc: string,
+  pdfLink: string,
   kind: string,
   kindLabel: string,
   survey: any, 
@@ -23,7 +23,7 @@ export default function ToolCard(props: Props) {
       <Link href={`/${props.kind}/${props.name}`}><h2 className="card-title">{props.survey?.data?.title}</h2></Link>
       <p>{props.kindLabel}</p>
       <div className="card-actions justify-end">
-        <a href={props.pdfSrc} className="btn btn-primary">Скачать PDF</a>
+        <a href={props.pdfLink} className="btn btn-primary">Скачать PDF</a>
       </div>
       </div>
     </div>
