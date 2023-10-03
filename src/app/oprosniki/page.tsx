@@ -23,7 +23,7 @@ export default async function SurveysPage() {
 function toolCard(name: string) {
   const file = fs.readFileSync(path.join(surveysDir, `/${name}/content.mdx`));
   const survey = matter(file);
-  const screenshotSrc = `/surveys/${name}/screenshot-1.png`;
+  const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/surveys/${name}/original-1.png`
   const pdfSrc = `/surveys/${name}/survey.pdf`;
 
   return (

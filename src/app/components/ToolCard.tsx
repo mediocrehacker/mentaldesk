@@ -39,7 +39,7 @@ function Img({src, title}: {src: string, title: string}) {
              alt={title}
              placeholder="blur"
              blurDataURL={rgbDataURL(255, 255, 255)}
-              unoptimized />
+             />
       </div>
   )
 }

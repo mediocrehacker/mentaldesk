@@ -37,7 +37,7 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
   const file = fs.readFileSync(path.join(surveysDir, `${params.slug}/content.mdx`));
   const survey = matter(file);
   const content = await toHtml(survey.content);
-  const screenshootSrc = `/surveys/${params.slug}/original-1.png`;
+  const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/surveys/${params.slug}/original-1.png`
   const pdfSrc = `/surveys/${params.slug}/survey.pdf`;
 
   return (
@@ -56,11 +56,11 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
           </div>
           <div className="">
           <a href={pdfSrc} target="_blank" className="">
-      <Image className="lg:max-w-[400px]" src={screenshootSrc}
+          <Image className="lg:max-w-[400px]" src={screenshotSrc}
               width={528}
               height={746}
               alt="Изображение опросника"
-              unoptimized />
+              />
           </a>
           </div>
           <div>

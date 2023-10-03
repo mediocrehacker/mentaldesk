@@ -37,7 +37,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const file = fs.readFileSync(path.join(worksheetsDir, `${params.slug}/content.mdx`));
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
-  const screenshootSrc = `/worksheets/${params.slug}/original-1.png`;
+  const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${params.slug}/original-1.png`
   const pdfSrc = `/worksheets/${params.slug}/worksheet.pdf`;
 
   return (
@@ -56,7 +56,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
           </div>
           <div className="">
           <a href={pdfSrc} target="_blank" className="">
-      <Image className="lg:max-w-[400px]" src={screenshootSrc}
+      <Image className="lg:max-w-[400px]" src={screenshotSrc}
               width={528}
               height={746}
               alt="Изображение опросника"
