@@ -13,7 +13,7 @@ type Props = {
 export default function ToolCard(props: Props) { 
 
   return (
-    <div className="card w-[320px] md:w-[420px] lg:w-[450px] xl:w-[550px] bg-neutral text-neutral-content lg:card-side bg-base-100">
+    <div className="card lg:card-side h-full bg-neutral text-neutral-content lg:card-side bg-base-100">
       <figure className="lg:w-1/3">
       <Link href={`/${props.kind}/${props.name}`}>
        <Img src={props.screenshotSrc} title={props.survey?.data?.title} /> 

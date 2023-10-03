@@ -12,8 +12,8 @@ export default async function WorksheetsPage() {
 
   return (
     <div className="">
-      <h1 className="text-4xl font-bold lg:pl-[19.5rem]">Рабочие Листы</h1>
-      <div className="flex flex-wrap gap-8 mt-8"> 
+      <h1 className="text-4xl font-bold mb-8">Рабочие Листы</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> 
         {names?.map((name) => toolCard(name))}
       </div>
     </div>
@@ -27,5 +27,7 @@ function toolCard(name: string) {
   const screenshotSrc = `/worksheets/${name}/screenshot-1.png`;
   const pdfSrc = `/worksheets/${name}/worksheet.pdf`;
 
-  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet} kindLabel="Рабочий Лист" kind="worksheets" />;
+  return (
+    <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet} kindLabel="Рабочий Лист" kind="worksheets" />
+  )
 }

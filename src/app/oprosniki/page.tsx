@@ -13,7 +13,7 @@ export default async function SurveysPage() {
   return (
     <div className="">
       <h1 className="text-4xl font-bold mb-8">Опросники</h1>
-      <div className="flex flex-wrap gap-8"> 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> 
         {names?.map((name) => toolCard(name))}
       </div>
     </div>
@@ -26,5 +26,7 @@ function toolCard(name: string) {
   const screenshotSrc = `/surveys/${name}/screenshot-1.png`;
   const pdfSrc = `/surveys/${name}/survey.pdf`;
 
-  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={survey} kindLabel="Опросник" kind="oprosniki" />;
+  return (
+    <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={survey} kindLabel="Опросник" kind="oprosniki" />
+  )
 }
