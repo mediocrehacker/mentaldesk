@@ -1,4 +1,5 @@
 import './global.scss';
+import Head from 'next/head';
 import Navbar from './components/Navbar'
 import { Footer } from './Footer'
 import Script from 'next/script';
@@ -21,6 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={inter.className}>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Все необходимые инструменты для профессионалов для профессионалов в области ментального здоровья"
+        />
+      </Head>
       <body>
       <div id="app">
         <Navbar />
