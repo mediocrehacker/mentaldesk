@@ -80,15 +80,15 @@ function Worksheet({ worksheet }: any) {
 function toolCardWorksheet(worksheet: any) {
   const name = worksheet?.slug;
   const screenshotSrc = `/worksheets/${name}/screenshot-1.png`;
-  const pdfSrc = `/worksheets/${name}/worksheet.pdf`;
+  const pdfLink = `/worksheets/${name}/worksheet.pdf`;
 
-  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet.file} kindLabel="Рабочий Лист" kind="worksheets" />;
+  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfLink={pdfLink} survey={worksheet.file} kindLabel="Рабочий Лист" kind="worksheets" />;
 }
 
 function toolCardSurvey(worksheet: any) {
   const name = worksheet?.slug;
   const screenshotSrc = `/surveys/${name}/screenshot-1.png`;
-  const pdfSrc = `/surveys/${name}/survey.pdf`;
+  const pdfLink = `/surveys/${name}/survey.pdf`;
 
-  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfSrc={pdfSrc} survey={worksheet.file} kindLabel="Опросник" kind="oprosniki" />;
+  return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfLink={pdfLink} survey={worksheet.file} kindLabel="Опросник" kind="oprosniki" />;
 }
