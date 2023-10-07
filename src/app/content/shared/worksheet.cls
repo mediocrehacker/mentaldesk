@@ -3,6 +3,7 @@
 
 \LoadClass[12pt]{article}
 
+\RequirePackage{tabularx}
 \RequirePackage[T2A]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english,russian]{babel}
@@ -16,10 +17,12 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 
-\geometry{ a4paper, lmargin=32pt, rmargin=32pt, bmargin=48pt, tmargin=48pt}
+\geometry{ a4paper, landscape, lmargin=32pt, rmargin=32pt, bmargin=48pt, tmargin=48pt}
 
 \fancyhf{}
 \pagestyle{fancy}
+
+\newcommand{\CustomHeader}[1]{\fancyhead[L]{\textbf{#1}}}
 
 \fancyfoot[L]{Предоставлено \textbf{MentalDesk}}
 \fancyfoot[R]{\footnotesize{© 2023 MentalDesk.ru}}
