@@ -11,7 +11,7 @@ export default function Home() {
 
 function HeroSearch() {
   return (
-    <div className="hero h-full g-base-200">
+    <div className="hero h-full bg-base-200">
       <div className="hero-content text-center">
         <div className="max-w-4xl">
           <Slogan />

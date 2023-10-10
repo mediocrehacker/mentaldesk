@@ -1,7 +1,7 @@
 export default function JobsPage() {
 // export const ContactPage = () => ( 
   return (
-    <div className="prose max-w-none lg:pl-[19.5rem]">
+    <div className="prose max-w-none lg:pr-[19.5rem]">
       <h1>Вакансии</h1>
       <div>
         <p>Если вам нравится наш проект и хотите его улучшить пишите в <a href="https://t.me/mentaldesk">телеграмме</a>.</p>

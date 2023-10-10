@@ -30,9 +30,9 @@ export default function RootLayout({
         />
       </Head>
       <body>
-      <div id="app">
+      <div id="app" className="bg-base-200">
         <Navbar />
-        <main className="wrapper ">
+        <main className="wrapper">
           {children}
         </main>
         <Footer />

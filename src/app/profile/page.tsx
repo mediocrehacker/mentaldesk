@@ -11,7 +11,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="prose prose-sm md:prose-base w-full max-w-4xl pt-10 mx-auto">
+    <div className="prose max-w-none lg:pr-[19.5rem]">
       <h1>Профайл</h1>
       <section>
         <UserCard user={session?.user} pagetype={"Server"} />
