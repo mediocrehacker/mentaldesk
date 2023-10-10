@@ -24,10 +24,6 @@ export const options: NextAuthOptions = {
       clientId: process.env.YANDEX_CLIENT_ID as string,
       clientSecret: process.env.YANDEX_CLIENT_SECRET as string,
     }),
-    VkProvider({
-      clientId: process.env.VK_CLIENT_ID as string,
-      clientSecret: process.env.VK_CLIENT_SECRET as string,
-    })
     // CredentialsProvider({
     //   name: "Credentials",
     //   credentials: {
