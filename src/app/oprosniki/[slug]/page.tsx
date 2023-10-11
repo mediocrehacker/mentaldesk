@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+
+import { sendPDF} from "../../../lib/send"
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
@@ -39,6 +41,7 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
   const content = await toHtml(survey.content);
   const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/surveys/${params.slug}/original-1.png`
   const pdfSrc = `/oprosniki/${params.slug}/download`;
+  const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/surveys/${params.slug}/survey.pdf`
 
   return (
       <div className="">
@@ -49,7 +52,7 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
           <div className="basis-2/6 flex flex-col gap-8">
 
           <div>
-            <a href={pdfSrc} className="btn btn-md btn-primary">Отправить клиенту</a>
+            <a href="#send_modal" className="btn btn-md btn-primary">Отправить клиенту</a>
           </div>
           <div className="flex gap-2">
             <div className="badge badge-outline">Опросник</div>
@@ -71,6 +74,50 @@ export default async function SurveyPage({ params }: { params: { slug: string } 
           </div>
           </div>
           </div>
+        <SendModal pdfSrc={pdfGithubSrc} pdfName={survey.data.title} />
       </div>
   );
+}
+
+
+type Props = {
+    pdfSrc: string,
+    pdfName: string,
+}
+
+async function SendModal({ pdfSrc, pdfName} : Props) {
+  return(
+<div className="modal" id="send_modal">
+  <div className="modal-box">
+    <form action={sendPDF}>
+      <input name="pdfSrc" type="hidden" defaultValue={pdfSrc} />
+      <input name="pdfName" type="hidden" defaultValue={pdfName} />
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Имя клиента</span>
+          </label>
+          <input type="text" id="clientName" name="clientName" className="input input-bordered" />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Адрес электронной почты</span>
+          </label>
+          <input type="email" id="clientEmail" name="clientEmail" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Заголовок письма</span>
+          </label>
+          <input id="emailTitle" name="emailTitle" type="text" defaultValue={pdfName} className="input input-bordered" required/>
+        </div>
+        <div className="form-control mt-6">
+          <button type="submit" className="btn btn-primary">Отправить клиенту</button>
+          <label className="label">
+            <span className="label-text-alt"> на его электронную почту</span>
+          </label>
+        </div>
+  </form>
+  </div>
+</div>
+  )
 }
