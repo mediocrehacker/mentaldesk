@@ -2,11 +2,11 @@
 'use server'
 
 import { redirect } from 'next/navigation';
-// import * as FormData from 'form-data';
+import * as FormData from 'form-data';
 import Mailgun from 'mailgun.js';
 import fs from 'fs';
 
-export async function sendPDF(data: FormData) {
+export async function sendPDF(data: any) {
   const fromEmail = process.env.EMAIL_FROM;
 
   const emailTitle = data.get("emailTitle")
@@ -40,5 +40,9 @@ export async function sendPDF(data: FormData) {
 
   messageParams.attachment = file;
 
-  mg.messages.create("mg.mentaldesk.ru", messageParams).then(msg => console.log(msg)).catch(err => console.error(err));
+  mg.messages.create("mg.mentaldesk.ru", messageParams)
+    .then(msg => console.log(msg))
+    .catch(err => console.error(er));
+
+  redirect('#')
 }
