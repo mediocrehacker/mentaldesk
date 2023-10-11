@@ -85,7 +85,7 @@ type Props = {
     pdfName: string,
 }
 
-async function SendModal({ pdfSrc, pdfName} : Props) {
+function SendModal({ pdfSrc, pdfName} : Props) {
   return(
 <div className="modal" id="send_modal">
   <div className="modal-box">
