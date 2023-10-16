@@ -1,4 +1,5 @@
 import Link from "next/link"
+import FilterBy from './components/FilterBy'
 import Search from './components/Search'
 import Slogan from './components/Slogan'
 
@@ -16,6 +17,7 @@ function HeroSearch() {
         <div className="max-w-4xl">
           <Slogan />
           <Search value=""/>
+          <FilterBy />
         </div>
       </div>
    </div>
