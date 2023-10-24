@@ -1,0 +1,38 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\documentclass[a4paper,12pt,oneside,headsepline]{scrartcl}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{paratype}
+\usepackage{parskip}
+\usepackage[most]{tcolorbox}
+\usepackage{color}
+\usepackage[margin=0cm]{geometry}
+\usepackage{lmodern}
+
+
+\begin{document}
+
+Hello
+
+
+\begin{tcbraster}[raster columns=2, raster equal height=rows, 
+size=small,boxrule=0pt,frame hidden, bicolor, colbacklower=white]
+\begin{tcolorbox}
+  {\sffamily\Large Название Вашего Центра \\ }
+  {Психотерапевт: Фамилия Имя Отчество \\}
+  {\emph{\Large Дневник Активности}} \\
+\end{tcolorbox}
+\begin{tcolorbox}
+  {\small Клиент: Фамилия Имя Отчество \\}
+  {\small Дата: 29/10/2023 \\} 
+\end{tcolorbox}
+\end{tcbraster}
+
+
+  {Психотерапевт: Фамилия Имя Отчество \\}
+
+\end{document}

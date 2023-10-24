@@ -1,0 +1,142 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\documentclass[a4paper,12pt,oneside,headsepline]{scrartcl}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{paratype}
+\usepackage{parskip}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{framed}
+\usepackage{background}
+\usepackage{changepage}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+
+
+\graphicspath{ {./imgs/} }
+\renewcommand{\familydefault}{\sfdefault}
+\geometry{ a4paper, lmargin=0.6cm, rmargin=0.6cm, bmargin=0.6cm, tmargin=0.7cm}
+
+\backgroundsetup{scale = 1, angle = 0, opacity = 1,
+contents = {\includegraphics[width = \paperwidth,
+height = \paperheight, keepaspectratio] {drawing.pdf}}}
+
+\makeatletter
+\newcommand{\DrawLine}{%
+  \begin{tikzpicture}
+  \path[use as bounding box] (0,0) -- (\linewidth,0);
+  \draw[color=black!75!black,dashed,dash phase=2pt]
+        (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
+        (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
+  \end{tikzpicture}%
+  }
+\makeatother
+
+\begin{document}
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-0.2cm}{-0.2cm}
+\mbox{%
+\noindent
+\begin{minipage}[c][2.35cm][c]{2.2cm}
+\includegraphics[width=1.8cm, height=1.8cm]{logo}
+\end{minipage}%
+
+\begin{minipage}{10cm}
+\color{Black}
+\raggedright
+\parbox[c][][c]{10cm}{%
+  {\small Врач-психиатр, КПТ психолог \\}
+  {\small \textbf{Доктор Менталдескович Скор Скорович}}
+}%
+\vspace{0.2cm}
+\parbox[b][][b]{10cm}{%
+  \begin{scriptsize}
+    info@mentaldeskovich.academy
+  \end{scriptsize}\\
+  \begin{scriptsize}
+    +7-123-456-78-90
+  \end{scriptsize}
+}
+\end{minipage}
+\hskip 1.6cm
+\begin{minipage}{0.3\linewidth}
+\color{Black}
+  \raggedright
+  {\small Клиент: \\ \textbf{Фамилия Имя Отчество} \\}
+  \vspace{0.2cm}
+  {\footnotesize Дата: 29/10/2023 } 
+\end{minipage}
+}
+\end{adjustwidth}
+\end{figure}
+
+{\huge {Поведенческий эксперимент}}
+
+\begin{flushleft}
+\large{\textbf{Часть 1:} Прогноз}
+\end{flushleft}
+
+
+\begin{tcolorbox}[standard jigsaw, opacityback=0, top=0]
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Мысли}} \\
+Какую мысль или убеждение вы бы хотели проверить?
+}
+\DrawLine
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Эксперимент}} \\
+Как вы узнаете, что ваш эксперимент удался?
+}
+
+\DrawLine
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Прогноз}} \\
+Каков ваш прогноз? \\
+Как вы узнаете, что ваш эксперимент удался?
+\begin{tcolorbox}[standard jigsaw, enlarge by=-4mm, height=2.8cm, width=6cm, boxsep=4mm, flush right]
+\center{Какие ощущения вы ожидаете после эксперимента?}
+\end{tcolorbox}
+}
+
+\end{tcolorbox}
+
+
+\begin{flushleft}
+\large{\textbf{Часть 2:} Результат}
+\end{flushleft}
+
+
+\begin{tcolorbox}[standard jigsaw,opacityback=0, top=0]
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Результат}} \\
+Что произошло во время эксперимента? \\
+\begin{tcolorbox}[standard jigsaw, enlarge by=-7mm, height=2.8cm, width=6cm, boxsep=4mm, flush right]
+\center{Какие ощущения вы испытали после эксперимента?}
+\end{tcolorbox}
+}
+
+\DrawLine
+
+\vspace{.5\baselineskip}
+\parbox[][4cm][t]{18cm}{
+{\textbf{\large Новые идеи}} \\
+Чему вы научились? \\
+Учитывая данные эксперимента, каковы ваши новые идеи?}
+\end{tcolorbox}
+
+\end{document}

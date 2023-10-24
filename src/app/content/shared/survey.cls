@@ -33,6 +33,7 @@
 
 
 % Colors
+% 744dac
 \definecolor{primary}{RGB}{100, 26, 230}
 \definecolor{secondary}{RGB}{217, 38, 169}
 \definecolor{accent}{RGB}{31, 178, 166}
