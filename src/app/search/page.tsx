@@ -41,7 +41,12 @@ export default async function WorksheetsPage({
     keys: ['file.data.title', 'file.data.teaser', 'file.content']
   });
 
-  const result = fuse.search(q).sort((a,b) => (a === b)? 0 : a? -1 : 1)
+  const result = fuse.search(q).sort((a,b) => (b.item.file.data.isReady - a.item.file.data.isReady))
+
+  // const result = {
+  //   availableData:  result.filter(x => x.item.file.data.isReady),
+  //   notAvailableData:  result.filter(x => !x.item.file.data.isReady),
+  // };
 
   return (
     <div className="g-base-200">

@@ -9,22 +9,23 @@ const contentDir = path.join(process.cwd(), 'src', 'app', 'content')
 
 export default async function WorksheetsPage() {
   const worksheetsDir = path.join(contentDir, 'worksheets'); 
-  const names = fs.readdirSync(worksheetsDir);
+  const worksheets = fs.readdirSync(worksheetsDir).map((slug) => {
+    const file = fs.readFileSync(path.join(worksheetsDir, `/${slug}/content.mdx`));
+    return { name: slug, file: matter(file)};
+  });
+  const result = worksheets.sort((a,b) => (b.file.data.isReady - a.file.data.isReady))
 
   return (
     <div className="">
       <h1 className="text-4xl font-bold mb-8">Рабочие Листы</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> 
-      {names.map((name) => toolCard(name))}
+      {result.map((worksheet) => toolCard(worksheet.name, worksheet.file))}
       </div>
     </div>
   )
 }
 
-function toolCard(name: string) {
-  const worksheetsDir = path.join(contentDir, 'worksheets'); 
-  const file = fs.readFileSync(path.join(worksheetsDir, `/${name}/content.mdx`));
-  const worksheet = matter(file);
+function toolCard(name: string, worksheet: any) {
   const screenshotSrc = srcImg(worksheet.data.isReady, name)
   const pdfLink= `/worksheets/${name}/download`;
 
