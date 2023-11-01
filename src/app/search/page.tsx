@@ -6,6 +6,7 @@ import Fuse from 'fuse.js';
 import Search from '../components/Search'
 import Slogan from '../components/Slogan'
 import ToolCard from '../components/ToolCard'
+import { srcImg } from '../../lib/worksheets'
 
 const worksheetsDir = path.join(process.cwd(), 'src', 'app', 'content', 'worksheets'); 
 const surveysDir = path.join(process.cwd(), 'src', 'app', 'content', 'surveys'); 
@@ -73,13 +74,12 @@ function Worksheet({ worksheet }: any) {
       break;
     }
   }
-  
-  
 }
+
 
 function toolCardWorksheet(worksheet: any) {
   const name = worksheet?.slug;
-  const screenshotSrc = `/worksheets/${name}/screenshot-1.png`;
+  const screenshotSrc = srcImg(worksheet?.isReady, name)
   const pdfLink = `/worksheets/${name}/worksheet.pdf`;
 
   return <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfLink={pdfLink} survey={worksheet.file} kindLabel="Рабочий Лист" kind="worksheets" />;

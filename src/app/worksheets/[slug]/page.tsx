@@ -9,6 +9,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
+import { srcImg } from '../../../lib/worksheets'
 
 async function toHtml(content: any) {
   const file = await unified()
@@ -37,7 +38,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const file = fs.readFileSync(path.join(worksheetsDir, `${params.slug}/content.mdx`));
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
-  const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${params.slug}/original-1.png`
+  const screenshotSrc = srcImg(worksheet.data.isReady, params.slug)
   const pdfSrc = `/worksheets/${params.slug}/download`;
 
   return (

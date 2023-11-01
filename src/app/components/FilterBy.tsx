@@ -63,7 +63,7 @@ const ThemeNoDescription = (problem: Problem) => {
   return(
     <a className="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1 h-[150px]" href={src}>
       <div className="card-body flex justify-center text-center">
-        <span className="text-lg">{problem.name}</span>
+        <span className="sm:text-sm md:text-lg ">{problem.name}</span>
       </div>
     </a>
   )

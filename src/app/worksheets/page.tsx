@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
 import ToolCard from '../components/ToolCard'
+import { srcImg } from '../../lib/worksheets'
 
 const contentDir = path.join(process.cwd(), 'src', 'app', 'content')
 
@@ -14,7 +15,7 @@ export default async function WorksheetsPage() {
     <div className="">
       <h1 className="text-4xl font-bold mb-8">Рабочие Листы</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> 
-        {names?.map((name) => toolCard(name))}
+      {names.map((name) => toolCard(name))}
       </div>
     </div>
   )
@@ -24,7 +25,7 @@ function toolCard(name: string) {
   const worksheetsDir = path.join(contentDir, 'worksheets'); 
   const file = fs.readFileSync(path.join(worksheetsDir, `/${name}/content.mdx`));
   const worksheet = matter(file);
-  const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${name}/original-1.png`
+  const screenshotSrc = srcImg(worksheet.data.isReady, name)
   const pdfLink= `/worksheets/${name}/download`;
 
   return (
