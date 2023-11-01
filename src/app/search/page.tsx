@@ -41,7 +41,7 @@ export default async function WorksheetsPage({
     keys: ['file.data.title', 'file.data.teaser', 'file.content']
   });
 
-  const result = fuse.search(q);
+  const result = fuse.search(q).sort((a,b) => (a === b)? 0 : a? -1 : 1)
 
   return (
     <div className="g-base-200">
