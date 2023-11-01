@@ -296,19 +296,6 @@
   dependencies:
     "@types/estree" "*"
 
-"@types/carbon-components-react@^7.55.2":
-  version "7.55.2"
-  resolved "https://registry.yarnpkg.com/@types/carbon-components-react/-/carbon-components-react-7.55.2.tgz#d5cab229cee78a25c58c3d0ab2e34e64b69116b0"
-  integrity sha512-4ikLLTykxeGYlvTRjnSbLNTLhlVaRyPhTnBlHFeRKMFHuGQB4N9qdG8xWMqaC+d+3ewSjQnOwYzzwJaLTLCfug==
-  dependencies:
-    "@types/react" "*"
-    flatpickr "4.6.9"
-
-"@types/carbon__icons-react@^11.20.0":
-  version "11.25.0"
-  resolved "https://registry.yarnpkg.com/@types/carbon__icons-react/-/carbon__icons-react-11.25.0.tgz#18bc3970bcee4cbb05adbcbdf2f515213befdadc"
-  integrity sha512-npUQ6mhvDu911h7S+dM824tJdX5dq2ZtCaebi9dTO36hBPBs/ex4vI6Db3me88prQzQeHcdE8rdH5Vjs3H5Vmw==
-
 "@types/debug@^4.0.0":
   version "4.1.8"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.8.tgz#cef723a5d0a90990313faec2d1e22aee5eecb317"
@@ -1420,11 +1407,6 @@ flat-cache@^3.0.4:
     flatted "^3.2.7"
     keyv "^4.5.3"
     rimraf "^3.0.2"
-
-flatpickr@4.6.9:
-  version "4.6.9"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.9.tgz#9a13383e8a6814bda5d232eae3fcdccb97dc1499"
-  integrity sha512-F0azNNi8foVWKSF+8X+ZJzz8r9sE1G4hl06RyceIaLvyltKvDl6vqk9Lm/6AUUCi5HWaIjiUbk7UpeE/fOXOpw==
 
 flatted@^3.2.7:
   version "3.2.7"
