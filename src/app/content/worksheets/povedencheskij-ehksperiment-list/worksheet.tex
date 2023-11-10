@@ -1,31 +1,54 @@
-\documentclass{survey}
-
-\usepackage{tcolorbox}
-\usepackage{tikz}
-\fancyhead[L]{\textbf{Поведенческий эксперимент (вертикальный формат)}}
-
-\makeatletter
-\newcommand{\DrawLine}{%
-  \begin{tikzpicture}
-  \path[use as bounding box] (0,0) -- (\linewidth,0);
-  \draw[color=black!75!black,dashed,dash phase=2pt]
-        (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
-        (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
-  \end{tikzpicture}%
-  }
-\makeatother
+\documentclass{worksheet}
 
 \begin{document}
 
-\section*{\huge{Поведенческий эксперимент}}
+% ==== BEGIN HEADER ==== 
+\begin{figure}[htbp]
+\begin{adjustwidth}{-0.2cm}{-0.2cm}
+\mbox{%
+\noindent
+\begin{minipage}[c][2.35cm][c]{2.2cm}
+\includegraphics[width=1.8cm, height=1.8cm]{logo}
+\end{minipage}%
+
+\begin{minipage}{10cm}
+\color{Black}
+\raggedright
+\parbox[c][][c]{10cm}{%
+  {\small \textbf{Название Вашего Психологического Центра} \\}
+  {\small Специалист: Имя Специалиста }
+}%
+\vspace{0.2cm}
+\parbox[b][][b]{10cm}{%
+  \begin{scriptsize}
+    info@mentaldesk.ru
+  \end{scriptsize}\\
+  \begin{scriptsize}
+    +7-999-333-22-11
+  \end{scriptsize}
+}
+\end{minipage}
+\hskip 1.6cm
+\begin{minipage}{0.3\linewidth}
+\color{Black}
+  \raggedright
+  {\small Клиент: \\ \textbf{Фамилия Имя Отчество} \\}
+  \vspace{0.2cm}
+  {\footnotesize Дата: 29/10/2023 } 
+\end{minipage}
+}
+\end{adjustwidth}
+\end{figure}
+% ==== END HEADER ====
+
+{\huge{Поведенческий эксперимент}}
 
 \begin{flushleft}
 \large{\textbf{Часть 1:} Прогноз}
 \end{flushleft}
 
 
-\begin{tcolorbox}[standard jigsaw, opacityback=0, top=0]
-
+\begin{tcolorbox}[standard jigsaw, opacityback=0, top=0mm]
 
 \vspace{.5\baselineskip}
 \parbox[][4cm][t]{18cm}{
@@ -60,7 +83,7 @@
 \end{flushleft}
 
 
-\begin{tcolorbox}[standard jigsaw,opacityback=0, top=0]
+\begin{tcolorbox}[standard jigsaw,opacityback=0, top=0mm]
 
 \vspace{.5\baselineskip}
 \parbox[][4cm][t]{18cm}{
@@ -82,3 +105,8 @@
 \end{tcolorbox}
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
