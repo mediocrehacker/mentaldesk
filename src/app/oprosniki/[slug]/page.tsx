@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-import { sendPDF} from "../../../lib/send"
+import { sendPDF } from "../../../lib/send"
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
