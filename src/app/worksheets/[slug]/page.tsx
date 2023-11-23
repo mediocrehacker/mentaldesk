@@ -41,6 +41,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
   const content = await toHtml(worksheet.content);
   const screenshotSrc = srcImg(worksheet.data.isReady, params.slug)
   const pdfSrc = `/worksheets/${params.slug}/download`;
+  const brandingPdf = `/worksheets/${params.slug}/branding`;
   const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${params.slug}/worksheet.pdf`
 
   return (
@@ -70,7 +71,7 @@ export default async function WorksheetPage({ params }: { params: { slug: string
           <a href={pdfSrc} className="btn btn-md btn-ghost">Скачать PDF</a>
           </div>
           <div>
-            <a href={pdfSrc} className="btn btn-md btn-info">Брендировать</a>
+            <a href={brandingPdf} className="btn btn-md btn-info">Брендировать</a>
           </div>
           </div>
           </div>
