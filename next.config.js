@@ -5,7 +5,6 @@ const nextConfig = {
   sassOptions: {
   },
   experimental: {
-    serverActions: true,
     mdxRs: true,
   },
   images: {
