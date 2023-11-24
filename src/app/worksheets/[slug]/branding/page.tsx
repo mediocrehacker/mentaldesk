@@ -1,7 +1,6 @@
 // @ts-nocheck
 'use client'
 
-import { branding } from "../../../../lib/branding"
 import { redirect } from 'next/navigation'
 import { options } from '../../../api/auth/[...nextauth]/options'
 import { useRouter } from 'next/router'
@@ -52,20 +51,25 @@ function BrandingPdf({slug} : Props) {
       customization: formData
     }
   
-    const endpoint = "45.91.8.168"
-    // const endpoint = "api.mentaldesk.ru"
-    // two times to bring background
-    const body = await fetch(`http://${endpoint}:8081/api/v1/conversion`, {
+    const endpoint = "/peregon/api/v1"
+    const body_ = await fetch(`${endpoint}/conversion`, {
       method: "POST",
       body: JSON.stringify(brandingParams),
       headers: {
         "Content-Type": "application/json",
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    }).then((resp) => resp.json())
+    const body = await fetch(`${endpoint}/conversion`, {
+      method: "POST",
+      body: JSON.stringify(brandingParams),
+      headers: {
+        "Content-Type": "application/json",
       },
     }).then((resp) => resp.json())
   
     const fileName = body?.contents?.fileName;
-    const pdfLink = `http://${endpoint}:8081/api/v1/static/${fileName}`
+
+    const pdfLink = `${endpoint}/static/${fileName}`
 
     await delay(2000);
     const buf = await fetch(pdfLink).then( resp => resp.arrayBuffer())

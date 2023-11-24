@@ -2,6 +2,14 @@
 
 const nextConfig = {
   output: 'standalone',
+  async rewrites() {
+    return [
+      {
+        source: '/peregon/api/:path*',
+        destination: 'http://api.mentaldesk.ru:8081/api/:path*'
+      }
+    ]
+  },
   sassOptions: {
   },
   experimental: {
