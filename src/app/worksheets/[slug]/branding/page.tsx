@@ -52,7 +52,9 @@ function BrandingPdf({slug} : Props) {
       customization: formData
     }
   
-    const endpoint = "api.mentaldesk.ru"
+    const endpoint = "45.91.8.168"
+    // const endpoint = "api.mentaldesk.ru"
+    // two times to bring background
     const body = await fetch(`http://${endpoint}:8081/api/v1/conversion`, {
       method: "POST",
       body: JSON.stringify(brandingParams),
