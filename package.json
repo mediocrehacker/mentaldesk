@@ -23,6 +23,7 @@
     "@types/react-dom": "19.0.3",
     "eslint": "8.52.0",
     "eslint-config-next": "15.1.6",
+    "form-data": "^4.0.1",
     "fuse.js": "^7.0.0",
     "gray-matter": "^4.0.3",
     "mailgun.js": "^9.3.0",

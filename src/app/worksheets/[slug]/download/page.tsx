@@ -1,22 +1,16 @@
-import { redirect } from 'next/navigation'
-import { options } from '../../../api/auth/[...nextauth]/options'
-import { getServerSession } from "next-auth/next"
-import { useRouter } from 'next/router'
+import { redirect } from "next/navigation";
+import { options } from "../../../api/auth/[...nextauth]/options";
+import { getServerSession } from "next-auth/next";
 
-export default async function DownloadPage(
-  props:{
-
-    params: Promise<{ slug: string }>
-  }
-) {
+export default async function DownloadPage(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
-  const session = await getServerSession(options)
-  const pdfLink= `/worksheets/${params.slug}/worksheet.pdf`;
+  const session = await getServerSession(options);
+  const pdfLink = `/worksheets/${params.slug}/worksheet.pdf`;
   if (session) {
-  return (
-    redirect(pdfLink)
-  )
+    return redirect(pdfLink);
   } else {
-    return redirect("/api/auth/signin")
+    return redirect("/api/auth/signin");
   }
 }
