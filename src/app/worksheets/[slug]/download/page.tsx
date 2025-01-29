@@ -3,13 +3,13 @@ import { options } from '../../../api/auth/[...nextauth]/options'
 import { getServerSession } from "next-auth/next"
 import { useRouter } from 'next/router'
 
-export default async function DownloadPage({
-  params,
-}:{
+export default async function DownloadPage(
+  props:{
 
-  params: { slug: string }
-})
-{
+    params: Promise<{ slug: string }>
+  }
+) {
+  const params = await props.params;
   const session = await getServerSession(options)
   const pdfLink= `/worksheets/${params.slug}/worksheet.pdf`;
   if (session) {

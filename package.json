@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev --turbopack -p 3000",
     "build": "prisma generate && next build",
     "vercel-build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
@@ -15,23 +15,23 @@
     "@auth/prisma-adapter": "^1.0.2",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
-    "@next/mdx": "^14.0.1",
+    "@next/mdx": "15.1.6",
     "@prisma/client": "^5.2.0",
     "@types/mdx": "^2.0.5",
     "@types/node": "20.8.10",
-    "@types/react": "18.2.33",
-    "@types/react-dom": "18.2.14",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
     "eslint": "8.52.0",
-    "eslint-config-next": "14.0.1",
+    "eslint-config-next": "15.1.6",
     "fuse.js": "^7.0.0",
     "gray-matter": "^4.0.3",
     "mailgun.js": "^9.3.0",
-    "next": "^14.0.1",
+    "next": "15.1.6",
     "next-auth": "^4.23.1",
     "nodemailer": "^6.9.6",
     "postmark": "^3.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "rehype-sanitize": "^6.0.0",
     "rehype-stringify": "^10.0.0",
     "sass": "^1.63.5",
@@ -44,5 +44,11 @@
     "postcss": "^8.4.29",
     "prisma": "^5.2.0",
     "tailwindcss": "^3.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.0.8",
+      "@types/react-dom": "19.0.3"
+    }
   }
 }

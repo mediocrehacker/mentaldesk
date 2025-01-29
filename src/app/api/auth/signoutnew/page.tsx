@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import { getCsrfToken } from "next-auth/react";
 
 export default async function Signout() {
-  const cookieVals = cookies().getAll().find((item)=> item.name.includes('next-auth.csrf-token'))
+  const cookieVals = (await cookies()).getAll().find((item)=> item.name.includes('next-auth.csrf-token'))
   const csrfToken = decodeURI(cookieVals?.value || "").split('|')[0]
 
   return (

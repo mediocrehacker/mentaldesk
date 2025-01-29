@@ -34,8 +34,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function WorksheetPage({ params }: { params: { slug: string } }) {
-  const worksheetsDir = path.join(contentDir, 'worksheets'); 
+export default async function WorksheetPage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
+  const worksheetsDir = path.join(contentDir, 'worksheets');
   const file = fs.readFileSync(path.join(worksheetsDir, `${params.slug}/content.mdx`));
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);

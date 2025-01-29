@@ -6,12 +6,12 @@ import { options } from '../../../api/auth/[...nextauth]/options'
 import { useRouter } from 'next/router'
 import { use, useState } from 'react'
 
-export default function BrandingPage({
-  params,
-}:{
-  params: { slug: string }
-})
-{
+export default function BrandingPage(
+  props:{
+    params: Promise<{ slug: string }>
+  }
+) {
+  const params = use(props.params);
   if (true){
   // const data = tex(params.slug);
   // const uri = 'data:application/pdf;base64,' + data;

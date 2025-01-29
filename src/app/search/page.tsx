@@ -16,13 +16,12 @@ enum Doc{
   Survey="oprosnik",
 }
 
-export default async function WorksheetsPage({
-  params,
-  searchParams,
-}:{
-  params: { slug: string }
-  searchParams: { [key: string]: string } })
-{
+export default async function WorksheetsPage(
+  props:{
+    params: Promise<{ slug: string }>
+    searchParams: Promise<{ [key: string]: string }> }
+) {
+  const searchParams = await props.searchParams;
   const q = searchParams.q! || '';
 
   const worksheets = fs.readdirSync(worksheetsDir).map((slug) => {
@@ -36,7 +35,7 @@ export default async function WorksheetsPage({
   });
 
   const docs = worksheets.concat(surveys);
-  
+
   const fuse = new Fuse(docs, {
     keys: ['file.data.title', 'file.data.teaser', 'file.content']
   });

@@ -34,8 +34,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function SurveyPage({ params }: { params: { slug: string } }) {
-  const surveysDir = path.join(contentDir, 'surveys'); 
+export default async function SurveyPage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
+  const surveysDir = path.join(contentDir, 'surveys');
   const file = fs.readFileSync(path.join(surveysDir, `${params.slug}/content.mdx`));
   const survey = matter(file);
   const content = await toHtml(survey.content);
