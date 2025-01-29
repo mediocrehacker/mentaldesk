@@ -1,21 +1,16 @@
-import type { NextAuthOptions } from 'next-auth'
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
+import type { NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
-import GitHubProvider from 'next-auth/providers/github'
+import GitHubProvider from "next-auth/providers/github";
 import YandexProvider from "next-auth/providers/yandex";
 import VkProvider from "next-auth/providers/vk";
-import CredentialsProvider from 'next-auth/providers/credentials'
-import { Client } from "postmark"
+import CredentialsProvider from "next-auth/providers/credentials";
+import { Client } from "postmark";
 
-const prisma = new PrismaClient();
-const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN as string)
+const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN as string);
 
 export const options: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
-
   pages: {
-    newUser: '/user' // New users will be directed here on first sign in (leave the property out if not of interest)
+    newUser: "/user", // New users will be directed here on first sign in (leave the property out if not of interest)
   },
 
   providers: [
@@ -29,8 +24,8 @@ export const options: NextAuthOptions = {
         port: process.env.EMAIL_SERVER_PORT,
         auth: {
           user: process.env.EMAIL_SERVER_USER,
-          pass: process.env.EMAIL_SERVER_PASSWORD
-        }
+          pass: process.env.EMAIL_SERVER_PASSWORD,
+        },
       },
       from: process.env.EMAIL_FROM,
       sendVerificationRequest: async ({ identifier, url, provider }) => {
@@ -40,13 +35,13 @@ export const options: NextAuthOptions = {
           From: provider.from,
           TemplateModel: {
             magic: url,
-          }
-        })
- 
+          },
+        });
+
         if (result.ErrorCode) {
-          throw new Error(result.Message)
+          throw new Error(result.Message);
         }
       },
     }),
   ],
-}
+};
