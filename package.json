@@ -28,7 +28,6 @@
     "gray-matter": "^4.0.3",
     "mailgun.js": "^9.4.1",
     "next": "15.1.6",
-    "next-auth": "^4.24.13",
     "nodemailer": "^6.10.1",
     "postmark": "^3.11.0",
     "react": "19.0.0",
