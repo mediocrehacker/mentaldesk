@@ -7,9 +7,7 @@
     "build": "prisma generate && next build",
     "vercel-build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
-    "lint": "next lint",
-    "prisma:generate": "npx dotenv-cli -e .env.local -- npx prisma generate",
-    "prisma:migrate": "npx dotenv-cli -e .env.local -- npx prisma migrate deploy"
+    "lint": "next lint"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^1.6.0",
