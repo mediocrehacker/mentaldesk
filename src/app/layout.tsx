@@ -1,4 +1,4 @@
-import './global.scss';
+import './global.css';
 import Head from 'next/head';
 import Navbar from './components/Navbar'
 import { Footer } from './Footer'
