@@ -32,7 +32,7 @@ export default function FilterBy() {
         Выберите тему для поиска по проблемам, таким как гнев, травма или
         депрессия.
       </p>
-      <div className="not-prose grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 my-10 gap-6">
+      <div className="not-prose grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 my-10 gap-6">
         {problems?.map((x) => ThemeNoDescription(x))}
       </div>
     </div>
@@ -43,7 +43,7 @@ const ThemeNoDescription = (problem: Problem) => {
   const src = `/search?q=${problem.description}`;
   return (
     <a
-      className="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1 h-[150px]"
+      className="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1 h-[160px]"
       href={src}
       key={problem.name}
     >

@@ -78,9 +78,6 @@ importers:
       remark-rehype:
         specifier: ^11.1.2
         version: 11.1.2
-      sass:
-        specifier: ^1.97.1
-        version: 1.97.1
       typescript:
         specifier: 5.2.2
         version: 5.2.2
@@ -3483,6 +3480,7 @@ snapshots:
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.1.2
+    optional: true
 
   client-only@0.0.1: {}
 
@@ -4187,7 +4185,8 @@ snapshots:
 
   ignore@7.0.5: {}
 
-  immutable@5.1.4: {}
+  immutable@5.1.4:
+    optional: true
 
   import-fresh@3.3.1:
     dependencies:
@@ -4985,7 +4984,8 @@ snapshots:
 
   react@19.2.3: {}
 
-  readdirp@4.1.2: {}
+  readdirp@4.1.2:
+    optional: true
 
   recma-build-jsx@1.0.0:
     dependencies:
@@ -5127,6 +5127,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.1
+    optional: true
 
   scheduler@0.27.0: {}
 

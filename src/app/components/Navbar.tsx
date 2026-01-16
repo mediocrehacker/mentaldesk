@@ -11,7 +11,7 @@ export default function Navbar() {
   if (!!user) { 
   return (
 
-    <header className="navbar bg-base-100 h-16">
+    <header className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
           <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

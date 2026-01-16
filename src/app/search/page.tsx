@@ -52,8 +52,8 @@ export default async function WorksheetsPage(
       <Slogan />
       <Search value={q} />
       <div className="">
-      <h1>Результаты поиска</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> 
+      <h1 className="text-xl">Результаты поиска</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-4"> 
           {result?.map((worksheet) => {
             return <Worksheet key={worksheet?.item?.slug} worksheet={worksheet?.item} />;
           })}
