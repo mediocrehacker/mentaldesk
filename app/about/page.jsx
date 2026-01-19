@@ -1,0 +1,23 @@
+import FilterBy from '../components/FilterBy';
+import Search from '../components/Search';
+import Slogan from '../components/Slogan';
+import Navbar from '../components/Navbar'; 
+import { Footer } from '../Footer';
+
+export default function Page() {
+  return (
+    <>
+      <Navbar />
+      <main className="wrapper">
+        <div className="prose max-w-none lg:pr-[19.5rem]">
+          <h1 className="text-4xl font-bold mb-8">О проекте</h1>
+          <p>Миссия Mental Desk заключается в предоствалении терапевтических материалов специалистам в области ментального здоровья. Все наши ресурсы создаются с учетом потребностей клиентов, что означает отказ от шаблонов и создание инструментов, полезных не только в теории, но и на практике.</p>
+          <p>Мы всегда рады услышать обратную связь. Оставьте свой отзыв в <a href="https://t.me/mentaldesk">телеграмме</a>.</p>
+        </div>
+      </main>
+      <Footer />
+    </>
+  ) 
+}
+
+

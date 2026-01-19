@@ -1,0 +1,147 @@
+import Image from 'next/image'
+import Navbar from '@/app/components/Navbar';
+import { Footer } from '@/app/Footer';
+
+import { sendPDF } from "../../../lib/send"
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter';
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeStringify from 'rehype-stringify'
+import { srcImg } from '@/lib/worksheets'
+
+async function toHtml(content: any) {
+  const file = await unified()
+    .use(remarkParse) // Convert into markdown AST
+    .use(remarkRehype) // Transform to HTML AST
+    .use(rehypeSanitize) // Sanitize HTML input
+    .use(rehypeStringify) // Convert AST into serialized HTML
+    .process(content)
+
+  return (String(file))
+}
+
+const contentDir = path.join(process.cwd(), 'app', 'content')
+
+export async function generateStaticParams() {
+  const worksheetsDir = path.join(contentDir, 'worksheets'); 
+  const names = fs.readdirSync(worksheetsDir);
+
+  return names.map((name) => ({
+    slug: name,
+  }))
+}
+
+export default async function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = props.params.then(slug => ({ slug: slug.slug }));
+
+  return (
+    <>
+      <Navbar />
+      <main className="wrapper">
+        <h1 className="text-4xl font-bold mb-8">Опросники</h1>
+        <Worksheet params={params}/>
+      </main>
+      <Footer />
+    </>
+    
+  )
+}
+
+async function Worksheet(props: { params: Promise<{ slug: string }> }) {
+  "use cache"
+  const { slug } = await props.params;
+  const worksheetsDir = path.join(contentDir, 'worksheets');
+  const file = fs.readFileSync(path.join(worksheetsDir, `${slug}/content.mdx`));
+  const worksheet = matter(file);
+  const content = await toHtml(worksheet.content);
+  const screenshotSrc = srcImg(worksheet.data.isReady, slug)
+  const pdfSrc = `/worksheets/${slug}/download`;
+  const brandingPdf = `/worksheets/${slug}/branding`;
+  const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${slug}/worksheet.pdf`
+
+  return (
+      <div className="">
+          <h1 className="text-4xl font-bold mb-8">{worksheet?.data?.title}</h1>
+      <div className="flex flex-col-reverse lg:flex-row gap-16">
+
+          <div className="prose max-w-none basis-4/6" dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="basis-2/6 flex flex-col gap-8">
+
+          <div>
+            <a href="#send_modal" className="btn btn-md btn-primary">Отправить клиенту</a>
+          </div>
+          <div className="flex gap-2">
+            <div className="badge badge-outline">Опросник</div>
+          </div>
+          <div className="">
+          <a href={pdfSrc} target="_blank" className="">
+      <Image className="lg:max-w-[400px]" src={screenshotSrc}
+              width={528}
+              height={746}
+              alt="Изображение опросника"
+              unoptimized />
+          </a>
+          </div>
+          <div>
+          <a href={pdfSrc} className="btn btn-md btn-ghost">Скачать PDF</a>
+          </div>
+          <div>
+            <a href={brandingPdf} className="btn btn-md btn-info">Брендировать</a>
+          </div>
+          </div>
+          </div>
+        <SendModal pdfSrc={pdfGithubSrc} pdfName={worksheet.data.title} />
+      </div>
+  );
+}
+
+type Props = {
+    pdfSrc: string,
+    pdfName: string,
+}
+
+function SendModal({ pdfSrc, pdfName} : Props) {
+  return(
+<div className="modal" id="send_modal">
+  <div className="modal-box">
+    <div className="flex justify-end">
+    <a href="#" className="tooltip" data-tip="Close">
+    <svg width="32" height="32" className="fill-current" clipRule="evenodd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"></path></svg>
+    </a>
+    </div>
+    <form action={sendPDF}>
+      <input name="pdfSrc" type="hidden" defaultValue={pdfSrc} />
+      <input name="pdfName" type="hidden" defaultValue={pdfName} />
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Имя клиента</span>
+          </label>
+          <input type="text" id="clientName" name="clientName" className="input input-bordered" />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Адрес электронной почты</span>
+          </label>
+          <input type="email" id="clientEmail" name="clientEmail" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Заголовок письма</span>
+          </label>
+          <input id="emailTitle" name="emailTitle" type="text" defaultValue={pdfName} className="input input-bordered" required/>
+        </div>
+        <div className="form-control mt-6">
+          <button type="submit" className="btn btn-primary">Отправить клиенту</button>
+          <label className="label">
+            <span className="label-text-alt"> на его электронную почту</span>
+          </label>
+        </div>
+  </form>
+  </div>
+</div>
+  )
+}
