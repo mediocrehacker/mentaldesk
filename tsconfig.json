@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-, "app/worksheets/page.tsx~", "app/oprosniki/[slug]/page.tsx~", "app/oprosniki/page.tsx~", "app/oprosniki/page.tsx~", "app/worksheets/[slug]/page.tsx~", "app/components/ToolCard.tsx~", "app/search/page.tsx~", ".next/dev/types/validator.ts~"  ],
+, "app/worksheets/page.tsx~", "app/oprosniki/[slug]/page.tsx~", "app/oprosniki/page.tsx~", "app/oprosniki/page.tsx~", "app/worksheets/[slug]/page.tsx~", "app/components/ToolCard.tsx~", "app/search/page.tsx~", ".next/dev/types/validator.ts~", "instrumentation-client.ts~"  ],
   "exclude": ["node_modules"]
 }

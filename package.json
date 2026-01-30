@@ -22,6 +22,7 @@
     "mailgun.js": "^12.6.1",
     "next": "latest",
     "next-themes": "^0.4.6",
+    "posthog-js": "^1.336.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rehype-sanitize": "^6.0.0",
