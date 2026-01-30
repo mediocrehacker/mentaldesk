@@ -46,6 +46,7 @@ export default function RootLayout({
         });`
       }
       </Script>
+      <Script src="https://t.contentsquare.net/uxa/d4b76e442b943.js"></Script>
       </body>
     </html>
   )
