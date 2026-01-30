@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import Navbar from '@/app/components/Navbar';
 import { Footer } from '@/app/Footer';
@@ -60,8 +61,8 @@ async function Worksheet(props: { params: Promise<{ slug: string }> }) {
   const content = await toHtml(worksheet.content);
   const screenshotSrc = srcImg(worksheet.data.isReady, slug)
   const pdfSrc = `/worksheets/${slug}/download`;
-  const brandingPdf = `/worksheets/${slug}/branding`;
-  const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/worksheets/${slug}/worksheet.pdf`
+  const brandingPdf = `/worksheets/${slug}/download`;
+  const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/app/content/worksheets/${slug}/worksheet.pdf`
 
   return (
       <div className="">

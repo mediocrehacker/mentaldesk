@@ -59,9 +59,9 @@ async function Survey(props: { params: Promise<{ slug: string }> }) {
   const file = fs.readFileSync(path.join(surveysDir, `${slug}/content.mdx`));
   const survey = matter(file);
   const content = await toHtml(survey.content);
-  const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/surveys/${slug}/original-1.png`
+  const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/app/content/surveys/${slug}/original-1.png`
   const pdfSrc = `/oprosniki/${slug}/download`;
-  const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/src/app/content/surveys/${slug}/survey.pdf`
+  const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/app/content/surveys/${slug}/survey.pdf`
 
   return (
       <div className="">
