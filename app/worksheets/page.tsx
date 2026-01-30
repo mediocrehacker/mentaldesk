@@ -44,7 +44,7 @@ async function Worksheets() {
 
 function toolCard(name: string, worksheet: any) {
   const screenshotSrc = srcImg(worksheet.data.isReady, name)
-  const pdfLink= `/worksheets/${name}/download`;
+  const pdfLink= `/worksheets/${name}/worksheet.pdf`;
 
   return (
     <ToolCard key={name} name={name} screenshotSrc={screenshotSrc} pdfLink={pdfLink} survey={worksheet} kindLabel="Рабочий Лист" kind="worksheets" />
