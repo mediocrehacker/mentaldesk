@@ -60,8 +60,8 @@ async function Worksheet(props: { params: Promise<{ slug: string }> }) {
   const worksheet = matter(file);
   const content = await toHtml(worksheet.content);
   const screenshotSrc = srcImg(worksheet.data.isReady, slug)
-  const pdfSrc = `/worksheets/${slug}/download`;
-  const brandingPdf = `/worksheets/${slug}/download`;
+  const pdfSrc = `/worksheets/${slug}/worksheet.pdf`;
+  const brandingPdf = `/worksheets/${slug}/worksheet.pdf`;
   const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/app/content/worksheets/${slug}/worksheet.pdf`
 
   return (
