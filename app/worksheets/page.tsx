@@ -13,7 +13,7 @@ export default async function Page() {
     <>
       <Navbar />
       <main className="wrapper">
-        <h1 className="text-4xl font-bold mb-8">Опросники</h1>
+        <h1 className="text-4xl font-bold mb-8">Рабочие листы</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Worksheets />
         </div>
