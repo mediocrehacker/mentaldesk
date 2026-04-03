@@ -42,7 +42,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
         <>
             <Navbar />
             <main className="wrapper">
-                <h1 className="text-4xl font-bold mb-8">Опросники</h1>
+                <h1 className="text-xl font-bold mb-8 text-primary">Опросники</h1>
                 <Survey params={params} />
             </main>
             <Footer />
@@ -61,6 +61,7 @@ async function Survey(props: { params: Promise<{ slug: string }> }) {
     const content = await toHtml(survey.content);
     const screenshotSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/app/content/surveys/${slug}/original-1.png`
     const pdfSrc = `/surveys/${slug}/survey.pdf`;
+    const brandingPdf = `https://app.mentaldesk.ru/branding/${slug}?practice_name=MentalDesk&therapist_title=Психолог:&client_title=Клиент:`;
     const pdfGithubSrc = `https://raw.githubusercontent.com/mediocrehacker/mentaldesk/main/app/content/surveys/${slug}/survey.pdf`
 
     return (
@@ -70,13 +71,10 @@ async function Survey(props: { params: Promise<{ slug: string }> }) {
 
                 <div className="prose max-w-none basis-4/6" dangerouslySetInnerHTML={{ __html: content }} />
                 <div className="basis-2/6 flex flex-col gap-8">
-
                     <div>
-                        <a href="#send_modal" className="btn btn-md btn-primary">Отправить клиенту</a>
+                        <a href={brandingPdf} className="btn btn-md btn-info">Брендировать</a>
                     </div>
-                    <div className="flex gap-2">
-                        <div className="badge badge-outline">Опросник</div>
-                    </div>
+
                     <div className="">
                         <a href={pdfSrc} target="_blank" className="">
                             <Image className="lg:max-w-[400px]" src={screenshotSrc}
@@ -89,9 +87,7 @@ async function Survey(props: { params: Promise<{ slug: string }> }) {
                     <div>
                         <a href={pdfSrc} className="btn btn-md btn-ghost">Скачать PDF</a>
                     </div>
-                    <div>
-                        <a href={pdfSrc} className="btn btn-md btn-info">Брендировать</a>
-                    </div>
+
                 </div>
             </div>
             <SendModal pdfSrc={pdfGithubSrc} pdfName={survey.data.title} />
